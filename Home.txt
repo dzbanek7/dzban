@@ -1,0 +1,13 @@
+====== Home ======
+Created poniedzia³ek 18 wrzesieñ 2017
+
+<!-- pocz¹tek kometarza wielowersowego 
+--> koniec kom.
+file:// plik zapisany lokalnie
+codecadeny
+khanacademy.org
+
+git pull -sciaga zapisane nowe zmiany
+git add . - dodaj wszytkie zmiant do repo
+git commite -m "komentarz" -tworzy "zdjêcie"
+git push - wysy³a zdjêcie do repo zdalengo
