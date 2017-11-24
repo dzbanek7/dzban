@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!--
+   index.html
+
+   Copyright 2017  <>
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+
+
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kalkulator</title>
+    
+    <style>
+        h1 {background-color: green;}
+    </style>
+    
+</head>
+
+<body>
+    
+<h1>Witaj na stronie!</h1>
+<p>Zaczniemy od pól tekstowych:</p>
+<label for="liczba1">Liczba 1: </label>
+<input type="text" id="liczba1">
+<label for="liczba2">Liczba 2: </label>
+<input type="text" id="liczba2">
+<button onclick="dodaj();">Dodaj</button>
+<button onclick="odejmij();">Odejmij</button>
+<button onclick="mnó¿();">Pomnó¿</button>
+<button onclick="dziel();">Podziel</button>
+
+<script>
+    
+    function dodaj(){
+  var liczba1 = document.getElementById("liczba1").value;
+  var liczba2 = document.getElementById("liczba2").value;
+  alert("Suma: "+ (parseInt(liczba1) + parseInt(liczba2)));
+}
+
+function odejmij(){
+  var liczba1 = document.getElementById("liczba1").value;
+  var liczba2 = document.getElementById("liczba2").value;
+  alert("Ró¿nica: "+ (parseInt(liczba1) - parseInt(liczba2)));
+}
+
+function mnó¿(){
+  var liczba1 = document.getElementById("liczba1").value;
+  var liczba2 = document.getElementById("liczba2").value;
+  alert("Iloczyn: "+ (parseInt(liczba1) * parseInt(liczba2)));
+}
+
+ if (parseInt(liczba2) == 0) {
+    alert("Nie wolno dzieliæ przez 0!");
+   liczba2 = 1;
+  }
+
+function dziel(){
+  var liczba1 = document.getElementById("liczba1").value;
+  var liczba2 = document.getElementById("liczba2").value;
+  alert("Iloraz: "+ (parseInt(liczba1) / parseInt(liczba2)));
+}
+
+</script>
+
+</body>
+
+</html>
