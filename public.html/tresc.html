@@ -43,7 +43,7 @@
 <input type="text" id="liczba2">
 <button onclick="dodaj();">Dodaj</button>
 <button onclick="odejmij();">Odejmij</button>
-<button onclick="mnó¿();">Pomnó¿</button>
+<button onclick="mnoz();">Pomnó¿</button>
 <button onclick="dziel();">Podziel</button>
 
 <script>
@@ -51,34 +51,31 @@
     function dodaj(){
   var liczba1 = document.getElementById("liczba1").value;
   var liczba2 = document.getElementById("liczba2").value;
-  alert("Suma: "+ (parseInt(liczba1) + parseInt(liczba2)));
+  alert("Suma: "+ (parseInt(liczba1)+parseInt(liczba2)));
 }
 
-function odejmij(){
+	function odejmij(){
   var liczba1 = document.getElementById("liczba1").value;
   var liczba2 = document.getElementById("liczba2").value;
-  alert("Ró¿nica: "+ (parseInt(liczba1) - parseInt(liczba2)));
+  alert("Ró¿nica: "+ (parseInt(liczba1)-parseInt(liczba2)));
 }
 
-function mnó¿(){
+	function mnoz(){
   var liczba1 = document.getElementById("liczba1").value;
   var liczba2 = document.getElementById("liczba2").value;
-  alert("Iloczyn: "+ (parseInt(liczba1) * parseInt(liczba2)));
+  alert("Iloczyn: "+ (parseInt(liczba1)*parseInt(liczba2)));
 }
 
- if (parseInt(liczba2) == 0) {
-    alert("Nie wolno dzieliæ przez 0!");
-   liczba2 = 1;
-  }
-
-function dziel(){
+	function dziel(){
   var liczba1 = document.getElementById("liczba1").value;
   var liczba2 = document.getElementById("liczba2").value;
-  alert("Iloraz: "+ (parseInt(liczba1) / parseInt(liczba2)));
+  if (parseInt(liczba2) == 0){
+		alert("Nie wolno dzieliæ przez 0!")
+	  }
+  alert("Iloraz: "+ (parseInt(liczba1)/parseInt(liczba2)));
 }
 
 </script>
 
 </body>
-
 </html>
