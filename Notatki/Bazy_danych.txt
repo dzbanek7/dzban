@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-22T10:01:12+01:00
+
+====== Bazy danych ======
+Created poniedziałek 22 styczeń 2018
+
+===== Projektowanie bazy danych =====
+tabela
+pola
+rekord - zbiór pół w obrępie jednej tabeli, dotyczące 1 obiektu
+
+Baza danych powina zajmować jak najmniej miejsca (brak powtarzających się informacji),
+
+Bza danych : min miejsca, spójność, zajmuje jak najmniej pamięci.
+
+===== Relacyja baza danych: =====
+- skłąda się z wielu tabel połączonych relacjami.
+
+===== Programy =====
+Microsoft Access(.accdb)
+LibreOffice Base(.odb)
+SQLiteStudio(.db, .sqlite)
+
+===== Język SQL =====
+strukturalny język zapytań stosowanych w bazach danych.
+
+===== Systemy / Silniki baz danych =====
+[[MySQL]]
+[[MariaDB]]
+[[PostgreSQL]]
+Oracle
+SQLite
+
+===== Typy danych =====
+
+==== liczbowe ====
+integer - liczby całkowite
+float, decimal, real - liczby zmiennoprzecinkowe
+
+==== tekstowe ====
+text[20], varchar[20]
+string - dłuższe ciągi tekstowe
+
+==== data i czas ====
+Date - data, np w formacie ISO, np. 2015-01-16
+[[DataTime]] - data i czas
