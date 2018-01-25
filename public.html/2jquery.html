@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ćwiczenia z jQuery</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world 1</h1>
+    <h1>Hello, world 2</h1>
+    <h1>Hello, world 3</h1>
+
+    <p id="akapit1">Jakiś przykładowy tekst</p>
+    <p id="akapit2">Jakiś <em>przykładowy</em> <b>tekst</b></p>
+    <p id="akapit3"><a href="http://lo1.sandomierz.pl">I LO CG Sandomierz</a></p>
+
+    <input type="text" name="imie" value="Moje imie">
+
+
+    <button id="btn1" type="button" name="btn1">Pokaż tekst</button>
+    <button id="btn2" type="button" name="btn2">Pokaż html</button>
+    <button id="btn3" type="button" name="btn2">Pokaż wartość</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(()=>{
+        $("#btn1").click(function(){
+          alert($("#akapit1").text());
+          $("#akapit1").text("abc");
+            //alert($("#akapit1").text());
+            alert($("h1:first").text());
+            $("h1").each(function(){
+                alert($(this).text());
+            });
+        });
+        $("#btn2").click(()=>{
+          alert($("#akapit2").html());
+          $("#akapit2").html('<div class="alert alert-info">Nowy alarm</div>');
+        });
+        $("#btn3").mouseover(()=>{
+          alert($("input[name='imie']").val());
+        });
+        $("#akapit3").mouseover(()=>{
+          alert($("p>a").attr("href"));
+          alert(document.location);
+          // document.location="http://distrowatch.com";
+        });
+      });
+    </script>
+  </body>
+</html>

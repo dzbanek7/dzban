@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ćwiczenia z jQuery</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world 1</h1>
+    <h1>Hello, world 2</h1>
+    <h1>Hello, world 3</h1>
+
+    <p id="akapit1">a1</p>
+    <p id="akapit2">a2</p>
+    <p id="akapit3">a3</p>
+
+    <input type="text" name="kod1" value="">
+    <label for="kod1">Pole 1</label>
+    <br>
+    <input type="text" name="kod2" value="">
+    <label for="kod2">Pole 2</label>
+    <br>
+    <input type="text" name="kod3" value="">
+    <label for="kod3">Pole 3</label>
+    <br>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(()=>{
+        $("input[name='kod1']").mouseover(()=>{
+          $("#akapit1").text($("input[name='kod1']").val());
+        });
+        $("input[name='kod2']").mouseover(()=>{
+          $("#akapit2").text($("input[name='kod2']").val());
+        });
+        $("input[name='kod3']").mouseover(()=>{
+          $("#akapit3").text($("input[name='kod3']").val());
+        });
+        
+      });
+    </script>
+  </body>
+</html>
