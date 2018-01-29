@@ -16,6 +16,11 @@ Bza danych : min miejsca, spójność, zajmuje jak najmniej pamięci.
 
 ===== Relacyja baza danych: =====
 - skłąda się z wielu tabel połączonych relacjami.
+- klucz główny (**ang. primary key**) - pole, którego wartość jest unikalna w obrębie tabeli, tzn. że klucz główny jednoznacznie identyfikuje rekord tabeli
+- klucz obcy (ang. secondary key, REFERENCES tabele_name)- klucz obcy pobiera wartośći z klucza głównego , łączy tabele zależne z tabelą główną
+
+===== Typy relacji =====
+
 
 ===== Programy =====
 Microsoft Access(.accdb)
