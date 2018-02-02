@@ -1,0 +1,79 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-02T12:34:25+01:00
+
+====== Klient-serwer ======
+Created piątek 02 luty 2018
+
+===== Serwer - "komuter" udestępniający zasoby =====
+
+1. DNS - Domain Name System , port 53 zmienia nazwe hostów na adresy IP, polecenie: **ping**
+2. HTTP - [[HyperText]] Transfer Protocol, komunikacja w zakresie stron WWW, PORT 80
+
+**Klient** - "komputer" korzystający z usług udostępnianych przez serwer np. przeglądarka WWW albo klient chat
+
+**Protokół** - "język" poruzumiewania się klienta z serwerem , protokoły def. są w dokumentach RFC
+
+Adresy IP - np. publiczny 221.34.2.10
+
+Port - liczba naturalna  identyfikująca usługę na serwerze , well known ports 0-1014, zob./etc/services
+
+===== Lokalny serwer HTTP =====
+phyton -m 
+phyton3
+
+**Domyślna nazwa serwera:** port
+
+
+**Domyślny zasób:** index.html, index.php, index
+
+**metoda GET: **
+
+===== Przykładowa analiza =====
+URI => URL
+http://lo1.sandomierz.pl/szukaj?words=PARNAS&search
+
+http:// - protokół
+
+lo1.sandomierz.pl - (pełnodomenowa) nazwa serwera
+
+/szukaj - zasób na serwerze
+
+/szukaj/ - katalog
+
+words=PARNAS - parametr w formacie nazwa = wartość
+
+& - znak służący rozdzielaniu parametrów 
+
+search - 
+
+? - początek listy parametrów
+
+
+https:// = HTTP + SSL
+
+===== Metody HTTP =====
+
+1. GET – pobranie zasobu wskazanego przez URI, może mieć postać warunkową jeśli w nagłówku występują pola warunkowe takie jak "If-Modified-Since", nie jest kodowany 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
