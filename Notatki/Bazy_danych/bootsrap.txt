@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-02T12:11:08+01:00
+
+====== bootsrap ======
+Created piątek 02 marzec 2018
+
+Twórcy bootstrapa podzielili wielkość ekranów na 5 kategorii. 
+
+ex - extra small
+sm - small
+md - medium
+lg - large
+xl - extra large
+
+margines - klasa zaczyna się od litery m (margin)
+wypełnienie - klasa zaczyna się od litery p (padding)
+top - t 
+bottom - b
+lrft - l
+right - r
+right i left - x (oba marginesy prawy i lewy)
+top i bottom - y  (oba marginesy góry i dolny)
+
+

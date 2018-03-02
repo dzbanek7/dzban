@@ -62,12 +62,8 @@ https:// = HTTP + SSL
 
 
 
-====== bootstrap ======
-ex - extra small
-sm - small
-md - medium
-lg - large
-xl - extra large
+
+
 
 
 
