@@ -22,4 +22,6 @@ right - r
 right i left - x (oba marginesy prawy i lewy)
 top i bottom - y  (oba marginesy góry i dolny)
 
+===== pseudo-elementy =====
+
 

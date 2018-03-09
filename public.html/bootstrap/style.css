@@ -1,0 +1,19 @@
+body {
+  background-image: url('full.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/*style użutkownika*/
+.mark, mark {
+  background-color: rgb(219, 174, 90);
+}
+
+.gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
