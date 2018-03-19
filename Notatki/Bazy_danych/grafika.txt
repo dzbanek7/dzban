@@ -1,0 +1,64 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-03-19T09:54:03+01:00
+
+====== Grafika ======
+Created poniedziałek 19 marzec 2018
+
+===== Model RGB =====
+
+Red - czerwony
+Green - zielony
+Blue - niebieski 
+
+W tym systemie kolor powstaje wskutek nakładania się trzech źródeł światła. W ten sposób powstaje kolor np. w monitorach i skanerach.
+
+Cechy:
+przekłądowy zapis (255,255,255) lub (0xFFFFFF) oznacza kolor biały, natomiast (0,0,0) lub (0x000000) - kolor czarny.
+
+Żeby zapisać 1 składową koloru potrzebny jest 8 bitów czyli 1 bajt. Są np. cztery skłądowe czyli 1 pixel to 4 bajty. 
+
+
+===== CMYK =====
+CMYK to model kolorów odbijającej światło powierzchni.
+
+Wartości C,M,Y,K mają zakres od 0-100.
+
+===== Model L*a*b =====
+
+
+
+===== Model HSB =====
+
+Pierwsza checha to barwa (**H**ue)
+Druga to nasycenie (**S**
+Trzecia to jasność (**B**rightness)
+
+===== Przestrzeń kolorów =====
+
+===== Grafika Rastrowa =====
+prezentacja obrazu za pomoca pionowo-poziomej siatki odpowiedno kolorowanych pixeli na monitorze komputera, drukarce lub innym urządzeniu wejściowym.
+
+Zapisujemy ją bez kompresji. Najlepszymi programami edycji grafiki rastrowej to Photoshop. GIMP,  Krita (program malarski, stosowany na Akademi Sztuk Pięknych w Paryżu).
+
+FORMAT grafiki rastrowej:
+
+PSD - rozszerzenie Photoshopa
+XCF - GIMP
+JPEG- za pomocą kopresij stratnej 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
