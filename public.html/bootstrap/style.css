@@ -17,3 +17,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.gallery-item {
+  margin: 5px;
+}
