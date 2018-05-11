@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-05-11T11:58:53+02:00
+
+====== SQL ======
+Created piątek 11 maja 2018
+
+klucz główny - identyfikuje dany rekord za pomocą numeru (np. może to byc pesel)
+KLUCZ OBCY ODYSŁĄ DO KLUCZA GŁÓWNEGO 
+
+C:\Windows\System32\sqlite3.exe
+
+cmd
+powershell
+sqlite3.exe szkola.db < szkola.sql
+sqlite3.exe szkola.db
+
+.tables  (polecenie w terminalu) pokazuje lisye tabel
+.schema poKAŻ POLA I TYPY DANYCH
+.quit wyjdz 
