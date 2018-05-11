@@ -12,9 +12,12 @@ C:\Windows\System32\sqlite3.exe
 
 cmd
 powershell
+
+polecenia w terminalu
 sqlite3.exe szkola.db < szkola.sql
 sqlite3.exe szkola.db
 
+po otwarciu interpretera sqlite w terminalu
 .tables  (polecenie w terminalu) pokazuje lisye tabel
 .schema poKAŻ POLA I TYPY DANYCH
 .quit wyjdz 
