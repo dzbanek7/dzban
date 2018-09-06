@@ -1,0 +1,73 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-06T08:07:49+02:00
+
+====== programowanie ======
+Created czwartek 06 września 2018
+mówienie urządzenie co ma robić i w jakiej kolejności
+
+==== kod maszynowy ====
+maszyna rozumie kod maszynowy czyli kod binarny (001010010111)
+
+==== jezyk programowania niskiego poziomu ====
+pierwsze jezyki programowania - asemblery 
+mov dec push pop or - podstawowe operacje ktore procesor jest w stanie wykonać
+kod wykonany w asemblerze wykonuje sie najszybciej 
+precyzyjna produkcja (częsci: tuleje itp.) - asembler
+
+==== jezyk programownaia wysokiego poziomu ====
+używają komend (np: print, else, if)
+stworzone na bazie asemblerów, muszą przetłumaczyc kod na kod maszynowy (1010011100) 
+
+ważne jezyki programowania wysokiego poziomu:
+-język C powstał w roku 1971r.
+-C++ powstał w 1983r.
+-Pascal w 1970r. był używany do uczenia programowania Python zastąpił Pascala 
+
+==== Od kodu do programu ====
+kod podawany przez programiste poddawana jest komplikacji, czyli przekształceniu na kod maszynowy, ten po przez linker łączy z kodem (konsolidacj) potrzebne do jego działania biblioteki i tworzy plik wykonywalny aplikacji. 
+działajaca aplikacjia to program.exe (charakterystyczne dla windowsa) 
+
+kopilowanie (linkowanie) działa tylko na takim samym urządzeniu na jakim to robiliśmy (np. jak pracujemy w linusie to nie otworzymy takiej aplikacji a windowsie, ponieważ te programy posiadają rózne biblioteki, także ma znaczenie wersja bitowa)
+
+kod źrudłowy jest iterpretowany (python, java) muszą być przetworzone przez inerpretery (cashowanie róznego rodzaju)
+
+==== jak powstaje program ====
+
+mamy konkretne zadania (oblicznie pola, objętności) i te zadania obliczmy za pomocą algorytmu (1.pobierz promień2.oblicz pole3.)
+algorytmy sa skończone, przekształcają dane wejsciowe na dane wyjściowe 
+kodowanie to zapis danego algorytmu w danym programie kodującym 
+algorytmy można zapisywać w rózny sposób 
+
+==== elementy schematu blokowego ====
+1.blok graniczny - pocżatek algorytmu (start)
+2.blok operacyjne - operacje zmieniajce wartości zmiennych (x=10)
+3.blok wejści/wyjścia - operacje wprowadzania i wyprowadzania danych (wpisz x)
+4.blok decyzyjny - wybór jednej z dwóch możliwych dróg działnia (x=100, tak? czy nie?)
+5.blok graniczny - koniec algorytmu (stop)
+
+==== sposoby zapisu algorytmu ====
+lista kroków
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
