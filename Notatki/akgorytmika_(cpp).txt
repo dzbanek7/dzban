@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-07T13:43:59+02:00
+
+====== akgorytmika (cpp) ======
+Created piątek 07 września 2018
+
+biblioteka standardowa <iostream> 
+
+podstawowe typy danych
+- char, int, long int(typy całkowite)
+- float (6 cyfr znaczacych), (double 10 cyfr znaczących), (zmienno-przecinkowe)
+- bool (true, false)
