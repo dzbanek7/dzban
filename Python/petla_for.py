@@ -8,13 +8,10 @@ def main(args):
     liczba = int(input('Podaj 1 liczbę: '))
     liczba2 = int(input('Podaj 2 liczbę: '))
     
-    while: liczba <= liczba 2:
+    while liczba >= liczba2:
         liczba2 = int(input('BŁEDNY ZAKRES! PODAJ NOWY'))
-    
-    if liczba >= liczba2:
-            print("Błędny zakres!")
             
-    for liczba in range(liczba, liczba2):
+    for liczba in range(liczba, liczba2 + 1):
         if liczba % 2 == 0:  
             print(liczba)
     
