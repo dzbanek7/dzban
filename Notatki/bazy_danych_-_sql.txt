@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-24T07:22:06+02:00
+
+====== bazy danych - sql ======
+Created poniedziałek 24 września 2018
+
+witryna internetowa: sqlpedia - kurs sql - projektowanie i normalizacja...
+
+=== Przechowywanie danych ===
+* powtarzające się dane zajmują miejsce na dysku, co spowalnia całą bazę danych.
+* kolumny w tabeli nie powiny zawierac kolekcji różnych wartości (jedna kolumna - jedna informacja)
+
+=== Normalizacja ===
+to bezstratny proces organizowania danych w tabelach mający na celu zmniejszenie ilości danych składowanych w bazie oraz wyeliminowanie potencjalnych anomali.
+Normalizacja przebiega w trzech krokach (trzy postacji normalne):
+1. NF: atomowość danych - każde pole przechowuje jedą informacje, dzieki czemu możemy dokonywać efektywnych zapytań. Wprowadza także pojęcie istnienia klucza głównego identyfikującego bezpośrednio każdy wiersz - unikat.
+2. NF: Ta postać określa esencję dobrego projektowania bazy. Mówi o tym, że każda tabela powinna przechowywać dane dotyczące tylko konkretnej klasy obiektów.
+3. NF: Polega na wyelimnowaniu z bazy niepotrzebnych pól.
