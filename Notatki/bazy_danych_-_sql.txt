@@ -17,3 +17,54 @@ Normalizacja przebiega w trzech krokach (trzy postacji normalne):
 1. NF: atomowość danych - każde pole przechowuje jedą informacje, dzieki czemu możemy dokonywać efektywnych zapytań. Wprowadza także pojęcie istnienia klucza głównego identyfikującego bezpośrednio każdy wiersz - unikat.
 2. NF: Ta postać określa esencję dobrego projektowania bazy. Mówi o tym, że każda tabela powinna przechowywać dane dotyczące tylko konkretnej klasy obiektów.
 3. NF: Polega na wyelimnowaniu z bazy niepotrzebnych pól.
+
+=== Więzy integralności - constraints ===
+
+id INTEGER PIMARY KEY AUTONUMERIC
+
+UNIQUE - unikalnosc wartosci w kolumnie
+NOT NULL - nie dopuszczenie pustych wartosci
+DEFAULT - wartosc domyslna: "" - (puste pole tekstowe), 10% 
+FOREIGN KEY - definicja klucz obcego
+nazwa_pola REFERENCES tabela(inne_pole)
+CHECK num1 > num2 - testowanie wartosci
+
+ON DELATE CASCADE - 
+Razem z wierszem tabeli nadrzednej zostają usuniete wszystkie wiersze tabeli podrzednej , w których wartosc klucza obcego wskazuja na usuwany wiersz (pod warunkie, ze usuniecie tych wierszy jest mozliwe bez naruszenia innych więzów referencyjnych).
+
+ON DAELATE SET NULL / SET DEFAUL
+
+=== DataTypes ===
+
+TEXT:
+CHAR(20) 'fjvsbnjn      ', nawet jesli napiszesz 10 znakow to on dokłada 10 spacji to tekstu
+VARCHAR(20) 'behdbgfbg', on nie doklada
+ 
+KODOWANIE = UTF-8
+
+REAL - pola zmienno przecinkowe (DOUBLE, FLOAT)
+NUMERIC - (DECIMAL, BOOLEAN, DATATIME)
+BOOLEAN (0, 1) - 0 - FALSE, 1 - TRUE
+
+=== Date and Time DataType ===
+
+text - ISO9601 string ('YYYY-MM-DD HH:MM:SS.SSS')
+czas uniksowy - liczba sekund od poczatku 1970r. w czsie uniwersalnym (1970- zaczela sie epoka uniksa) służy do tego funkcja time()
+REAL liczba dni w kalendarzy julianskim 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
