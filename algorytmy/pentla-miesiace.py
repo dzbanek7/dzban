@@ -9,7 +9,7 @@ def main(args):
 	
 	while 1 > 0:
 		numer = int(input("Podaj numer miesiąca: "))
-		if numer > 12 or numer < 1:
+		if 1 > numer > 12:
 			print("Wprowadzone dane są błędne! ")
 		else:
 			print (nazwy[numer - 1])
