@@ -65,21 +65,26 @@ def choinka2(h, znak):
     
     return 0
     
-def trujkat(h, znak):
+def trojkat(h, znak):
     
-    h = int(input("Podaj wysokośc choinki: "))
-    znak = str(input("Podaj znak drukowania choinki: "))
+    h = int(input("Podaj wysokość trojkata: "))
+    znak = str(input("Podaj znak drukowania trojkata: "))
     
-    for i in range(h):
-        for j in range(h + i):
-            print(znak , end = '')
+    t = (h-1)*2
+    
+    for i in range(h-1, -1, -1):
+        for j in range(t+1):
+            if j < i or j > t-i:
+                print(" ", end='')
+            else:
+                print(znak, end='')
         print()
     
     return 0
 
 def main(args):
     h, znak = 6, "$"
-    choinka2(h, znak)
+    trojkat(h, znak)
     print()
     
     return 0
