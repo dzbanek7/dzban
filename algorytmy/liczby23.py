@@ -27,11 +27,11 @@ def liczby3():
     Wykluczone liczby: 111, 222, 333, 110, 211 itd.
     """
     
-    ile = 0
+    ile = 0 # licznik
     
-    for i in range(1, 10):
-        for j in range(0, 10):
-            for k in range(0, 10):
+    for i in range(1, 10): # cyfra setek
+        for j in range(0, 10): # cyfra dziesiątek
+            for k in range(0, 10): # cyfra jedności
                 if i == j or i == k or k == j:
                     print("", end = '')
                 else:
@@ -41,7 +41,8 @@ def liczby3():
     return ile
 
 def main(args):
-    print("Liczby 2-cyfrowych: ", liczby3())
+    print("Liczby 2-cyfrowych: ", liczby2())
+    print("Liczby 3-cyfrowych: ", liczby3())
     return 0
 
 if __name__ == '__main__':
