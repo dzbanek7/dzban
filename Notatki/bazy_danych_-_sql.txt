@@ -52,6 +52,10 @@ text - ISO9601 string ('YYYY-MM-DD HH:MM:SS.SSS')
 czas uniksowy - liczba sekund od poczatku 1970r. w czsie uniwersalnym (1970- zaczela sie epoka uniksa) służy do tego funkcja time()
 REAL liczba dni w kalendarzy julianskim 
 
+=== Komendy w terminalu: ===
+LEFT JOIN 
+IS (NOT) NULL
+
 
 
 
