@@ -19,14 +19,22 @@ def nww(a, b):
     """
     Oblicza i zwraca najmniejszą wspólną wielokrotność.
     """
-    return 0
+    nww = 0
+    nww = a * b / nwd_klasyk(a, b)
+    
+    return nww
 
 def main(args):
-    a, b = 27, 9
+    a = int(input('Podaj 1 liczbę: '))
+    b = int(input('Podaj 2 liczbę: '))
     print("Nwd({}, {}) = {}".format(
                             a,
                             b,
                             nwd_klasyk(a, b))) # wywołanie funkcji
+    print("Nww({}, {}) = {}".format(
+                            a,
+                            b,
+                            nww(a, b))) # wywołanie funkcji
     return 0
 
 if __name__ == '__main__':
