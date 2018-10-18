@@ -19,14 +19,23 @@ def nww(a, b):
     """
     Oblicza i zwraca najmniejszą wspólną wielokrotność.
     """
+<<<<<<< HEAD:algorytmy/euklides.py
     nww = 0
+=======
+    
+>>>>>>> f28febc688eca5ea009b3b4533b2887d76ff2e84:Python/algorytmy/euklides.py
     nww = a * b / nwd_klasyk(a, b)
     
     return nww
 
 def main(args):
+<<<<<<< HEAD:algorytmy/euklides.py
     a = int(input('Podaj 1 liczbę: '))
     b = int(input('Podaj 2 liczbę: '))
+=======
+    a = int(input("Podaj pierwsza liczbe: "))
+    b = int(input("Podaj drugą liczbe: "))
+>>>>>>> f28febc688eca5ea009b3b4533b2887d76ff2e84:Python/algorytmy/euklides.py
     print("Nwd({}, {}) = {}".format(
                             a,
                             b,
