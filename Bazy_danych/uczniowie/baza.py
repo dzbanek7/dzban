@@ -72,7 +72,19 @@ def main(args):
     for tab in tabele:
         ile = ile_kolumn(cur, tab)
         dane = dane_z_pliku(tab + roz, separator=',')
-        print(dane)
+        ile_d = len(dane[0])
+        
+        if ile > ile_d: #trzeba dodac NONE 
+            dane2 = [] # tymczasowa lista
+            for r in dane:
+                r.insert(0, None)
+                dane2.append(r)
+            dane = dane2
+            
+        ile = len(dane[0])
+                
+        cur.executemany('INSERT INTO ' + tab + 
+            ' VALUES(' + ','.join(['?'] * ile) + ')', dane)
 
     con.commit()  # zatwierdzenie zmian w bazie
     con.close()  # zamknięcie połączenia z bazą
