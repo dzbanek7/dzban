@@ -43,11 +43,20 @@ def kwerenda_1(cur):
     for row in wyniki:  # odczytywanie kolejnych rekordów
         print(tuple(row))  # drukowanie pól
 
+def ile_kolumn(cur, tab):
+    """Funkcja sprawdza i zwraca liczbe kolumn w podanej tabeli"""
+    licznik = 0
+    for kol in cur.execute("PRAGMA table_info('" + tab + "')"):
+        licznik += 1 
+    return licznik
+
 
 def main(args):
     # KONFIGURACJA #######
     baza_nazwa = 'uczniowie'
     tabele = ['uczniowie', 'klasy', 'przedmioty', 'oceny']
+    roz = '.csv'
+    #####################
 
     con = sqlite3.connect(baza_nazwa + '.db')  # połączenie z bazą
     cur = con.cursor()  # utworzenie kursora
@@ -58,26 +67,12 @@ def main(args):
 
     with open(baza_nazwa + '.sql', 'r') as plik:
         cur.executescript(plik.read())
-    return 0
 
-    # dodawanie danych do bazy
-    dane = dane_z_pliku('uczniowie.csv')
-    print(dane)
-    dane.pop(0)  # usuń pierwszy rekord z listy
-    cur.executemany('INSERT INTO uczniowie VALUES(?, ?, ?, ?, ?, ?, ?, ?)', dane)
-
-    dane = dane_z_pliku('klasy.csv')
-    print(dane)
-    dane.pop(0)  # usuń pierwszy rekord z listy
-    cur.executemany('INSERT INTO klasy VALUES(?, ?, ?, ?)', dane)
-
-    dane = dane_z_pliku('dane_orders.txt')
-    print(dane)
-    dane.pop(0)  # usuń pierwszy rekord z listy
-    cur.executemany('INSERT INTO orders VALUES(?, ?, ?, ?)', dane)
-
-    # przykład zapytania (kwerendy)
-    #kwerenda_1(cur)
+    # dodawanie danych
+    for tab in tabele:
+        ile = ile_kolumn(cur, tab)
+        dane = dane_z_pliku(tab + roz, separator=',')
+        print(dane)
 
     con.commit()  # zatwierdzenie zmian w bazie
     con.close()  # zamknięcie połączenia z bazą
