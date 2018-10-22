@@ -1,0 +1,89 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sqlite3
+import csv
+import os.path
+
+def czy_jest(plik):
+    '''Funkcja sprawdza czy plik istnieje na dysku '''
+    if not os.path.isfile(plik):
+        print("Plik {} nie istnieje!".format(plik))
+        return False
+    return True
+            
+
+def dane_z_pliku(nazwa_pliku, separator=','):
+    dane = []  # pusta lista na dane
+    if not czy_jest(nazwa_pliku):
+        return dane 
+
+    with open(nazwa_pliku, 'r', newline='', encoding='utf-8') as plik:
+        tresc = csv.reader(plik, delimiter=separator)
+        for rekord in tresc:
+            rekord = [x.strip() for x in rekord]  # oczyszczamy dane
+            dane.append(rekord)  # dodawanie rekordów do listy
+    return dane
+
+
+def kwerenda_1(cur):
+    cur.execute("""
+        SELECT * FROM magazyn
+    """)
+
+    """
+    SELECT name, downloads FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps);
+    SELECT name, downloads FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps) ORDER BY downloads DESC LIMIT 5;
+    SELECT COUNT(name) FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps);
+    SELECT category, SUM(downloads) AS suma_pobran FROM fakeapps GROUP BY category ORDER BY suma_pobran DESC;
+
+
+    """
+    wyniki = cur.fetchall()  # pobranie wszystkich rekordów na raz
+    for row in wyniki:  # odczytywanie kolejnych rekordów
+        print(tuple(row))  # drukowanie pól
+
+
+def main(args):
+    # KONFIGURACJA #######
+    baza_nazwa = 'uczniowie'
+    tabele = ['uczniowie', 'klasy', 'przedmioty', 'oceny']
+
+    con = sqlite3.connect(baza_nazwa + '.db')  # połączenie z bazą
+    cur = con.cursor()  # utworzenie kursora
+
+    # utworzenie tabeli w bazie
+    if not czy_jest(baza_nazwa + '.sql'):
+        return 0
+
+    with open(baza_nazwa + '.sql', 'r') as plik:
+        cur.executescript(plik.read())
+    return 0
+
+    # dodawanie danych do bazy
+    dane = dane_z_pliku('uczniowie.csv')
+    print(dane)
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO uczniowie VALUES(?, ?, ?, ?, ?, ?, ?, ?)', dane)
+
+    dane = dane_z_pliku('klasy.csv')
+    print(dane)
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO klasy VALUES(?, ?, ?, ?)', dane)
+
+    dane = dane_z_pliku('dane_orders.txt')
+    print(dane)
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO orders VALUES(?, ?, ?, ?)', dane)
+
+    # przykład zapytania (kwerendy)
+    #kwerenda_1(cur)
+
+    con.commit()  # zatwierdzenie zmian w bazie
+    con.close()  # zamknięcie połączenia z bazą
+    return 0
+
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(main(sys.argv))
