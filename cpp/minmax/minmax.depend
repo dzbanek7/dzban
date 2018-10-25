@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1540370010 source:/home/kl2ag2/mojprojekt/cpp/minmax/main.cpp
+	<iostream>
+
+1540449845 source:/home/kl2ag2/dzban/cpp/minmax/main.cpp
+	<iostream>
+	<cstdlib>
+
