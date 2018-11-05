@@ -42,4 +42,3 @@ CREATE TABLE oceny
     WF VARCHAR,
     FOREIGN KEY (id) REFERENCES nazwiska(id_ucznia)
 );
-
