@@ -61,11 +61,23 @@ int zlicz(char tb[]) {
 }
 
 void ascii(char tb[], int roz) {
+    int kod = 0;
     for(int i = 0; i < roz; i++) {
-            cout << (int)tb[i] << " ";
+            kod = (int)tb[i];
+            if (kod > 96 && kod < 123)
+                cout << (char)(kod-32) << " ";
+            else if (kod > 64 && kod < 91)
+                cout << (char)(kod+32) << " ";
+            else
+                cout << tb[i] << " ";
     }
 }
 
+void odwroc(char tb[], int roz) {
+    int kod = 0;
+    for(int i = roz-1; i >= 0; i--)
+    cout << tb[i] << " ";
+}
 
 int main(int argc, char **argv)
 {
@@ -78,7 +90,8 @@ int main(int argc, char **argv)
     //~ilosc = zlicz(znaki);
     int ilosc = 0;
     ilosc = strlen(znaki);
-    ascii(znaki, ilosc);
+    //~ascii(znaki, ilosc);
+    odwroc(znaki, ilosc);
 
     return 0;
 }
