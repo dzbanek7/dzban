@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     cin >> n;
     cout << "Ciąg Fibonacciego do wyrazu " << n << ":" << endl;
     for (int i = 0; i <= n; i++) {
-        cout << fibonacci_it(i) << endl;;
+        cout << fibonacci_it(i) << endl;
     }
 	return 0;
 }
