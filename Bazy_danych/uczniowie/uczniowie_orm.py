@@ -11,8 +11,7 @@ baza = SqliteDatabase(baza_plik)
 class BazaModel(Model):
     class Meta:
         database = baza
-
-
+        
 class Klasa(BazaModel):
     nazwa = CharField(null=False)
     roknaboru = IntegerField(default=0)
@@ -23,18 +22,27 @@ class Uczen(BazaModel):
     nazwisko = CharField(null=False)
     plec = BooleanField()
     klasa = ForeignKeyField(Klasa, related_name='uczniowie')
-    
-class Wynik(BazaModel):
     egz_hum = DecimalField(default=0) 
     egz_mat = DecimalField(default=0) 
     egz_jez = DecimalField(default=0) 
-    klasa = ForeignKeyField(Uczen, related_name='wyniki')
+
+class Przedmiot(BazaModel):
+    przedmiot = CharField(null=False)
+    imie_naucz = CharField(null=False)
+    nazwisko_naucz = CharField(null=False)
+    plec_naucz = BooleanField()
+    
+class Ocena(BazaModel):
+    data = DateField()
+    uczen = ForeignKeyField(Uczen, related_name='oceny')
+    przedmiot = ForeignKeyField(Przedmiot, related_name='przedmioty')
+    ocena = IntegerField(default=0) 
     
 def main(args):
     if os.path.exists(baza_plik):
         os.remove(baza_plik)
     baza.connect()
-    baza.create_tables([Klasa, Uczen, Wynik])
+    baza.create_tables([Klasa, Uczen, Przedmiot, Ocena])
     
     kl1 = Klasa(nazwa='2A', roknaboru=2012, rokmatury=2015)
     kl1.save()
@@ -60,7 +68,6 @@ def main(args):
     klasa = Klasa.select()
     for klasa in Klasa:
         print(klasa.id, klasa.nazwa, klasa.roknaboru, klasa.rokmatury)
-    
     baza.close()
     return 0
 
