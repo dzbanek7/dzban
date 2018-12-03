@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-12-03T07:26:40+01:00
+
+====== python ======
+Created poniedziałek 03 grudnia 2018
+
+uruchamianie modułu w terminalu 
+
+python3 -m venv pve3 == utworzenie modułu
+source [[~/pve3/bin/activate]] == aktywacjia modułu
+pip install peewee - instalacja modułu
