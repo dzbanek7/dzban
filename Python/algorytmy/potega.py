@@ -4,6 +4,12 @@
 #  potega.py
 #  Obliczanie potęgi liczby naturalnej
 
+def potega_re(a, n):
+    if n == 0:
+        return 1
+    potega_re(a, n)
+        
+
 def potega_it(a, n):
     wynik = 1
     
