@@ -36,4 +36,4 @@ class Ocena(BazaModel):
     data = DateField()
     uczen = ForeignKeyField(Uczen, related_name='oceny')
     przedmiot = ForeignKeyField(Przedmiot, related_name='przedmioty')
-    ocena = IntegerField(default=0) 
+    ocena = DecimalField(default=0) 

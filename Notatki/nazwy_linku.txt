@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-12-10T08:10:00+01:00
+
+====== nazwy linku ======
+Created poniedziałek 10 grudnia 2018
+
+http:// - protokół
+.lo1.sandomierz.pl
+/ - główny katalog serwra
+
+Running on 
+http:// 
+127.0.0.1:5000
