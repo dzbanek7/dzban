@@ -46,6 +46,18 @@ void sort_bubble(int tab[], int n) {
     }
 }
 
+void sort_selection(int tab[], int n) {
+    int i, k, j;
+    for (i = 0; i < n - 1; i++) {
+        k = i; //indeks najmniejszego elementu
+        for (j = k + 1; j < n; j++) {
+            if (tab[j] < tab[k])
+                k = j;
+        }
+        zamien1(tab[i], tab[k]);
+    }
+}
+
 int main(int argc, char **argv)
 {
 	int roz = 20;
@@ -57,7 +69,7 @@ int main(int argc, char **argv)
     //~tab[1] = 5;
     //~zamien1(tab[0], tab[1]);
     //~cout << tab[0] << " " << tab[1];
-	sort_bubble(tab, roz);
+	sort_selection(tab, roz);
     drukuj(tab, roz);
     return 0;
 }
