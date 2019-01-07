@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!--
+   szablon.html
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block tytul %}{% endblock %}</title>
+    <style type="text/css">
+        .info { color: blue; border: 1px solid lightblue; padding: 0,5em; }
+        #menu li { display: inline; margin-left: 0.8em; }
+    </style>
+</head>
+
+<body>
+    
+    <div id="menu">
+        <ol>
+            <li><a href="{{url_for()}}">Strona główna</a></li>
+            <li><a href="{{url_for()}}">Lista</a></li>
+            <li><a href="{{url_for()}}">Quiz</a></li>
+        </ol>
+    </div>
+    
+    <h1>{% block tytul %}{% endblock %}</h1>
+
+    {% with komunikaty = get_flashed_messages(with_categories=true) %}
+    {% if komunkaty %}
+        {% for kat, kom in komunikaty %}
+        <p class="{{ kat }}">{{ kom }}</p> 
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+
+    {% block tytul %}{% endblock %}
+</body>
+
+</html>

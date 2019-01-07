@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!-- quiz.html -->
+
+<head>
+<meta charset="utf-8" />
+<title>Aplikacja Quiz - rozwiąż quiz</title>
+</head>
+
+<body>
+    <h1>Quiz - odpowiedzi na pytania</h1>
+    
+    <form method="POST">
+        <ol>
+        {% for p in pytania %}
+            <li>
+                {{ p.pytanie }}
+                <ol>
+                    {% for o in p.odpowiedzi %}
+                    <li>
+                        <input type="radio" name="{{ p.id }}" value="{{ o.id }}">
+                        {{ o.odpowiedz }}
+                    </li>
+                    {% endfor %}
+                </ol>
+            </li>
+        {% endfor %}
+        </ol>
+        
+        <input type="submit" value="Zatwierdź">
+    </form>
+    
+    
+</body>
+
+</html>
