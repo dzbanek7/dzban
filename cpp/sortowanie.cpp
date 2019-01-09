@@ -59,15 +59,15 @@ void sort_selection(int tab[], int n) {
 }
 
 void sort_insert(int tab[], int n) {
-    int i, k, j;
-    for (i = 1; i < n - 1; i++) {
-        el = tab[i]
-        k = i - 1; //indeks porównywanego elementu z częsci posortowanej
+    int i, k, el;
+    for (i = 1; i < n; i++) {
+        el = tab[i];
+        k = i-1; //indeks porównywanego elementu z częsci posortowanej
         while (k>=0 && tab[k]>el) {
-            tab[]=tab[];
-                k --;
+            tab[k+1]=tab[k];
+                k--;
         }
-        operacjia;
+        tab[k+1] = el;
     }
 }
 
@@ -82,7 +82,7 @@ int main(int argc, char **argv)
     //~tab[1] = 5;
     //~zamien1(tab[0], tab[1]);
     //~cout << tab[0] << " " << tab[1];
-	sort_selection(tab, roz);
+	sort_insert(tab, roz);
     drukuj(tab, roz);
     return 0;
 }
