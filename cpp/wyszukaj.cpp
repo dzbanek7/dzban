@@ -47,12 +47,23 @@ int szukaj_bin_lin(int tab[], int n, int szuk) {
     while (p <= k) {
         s = (p + k) / 2;
         if (tab[s] == szuk) {
-            p = s;
-            break;
+            return s;
         } else if (szuk < tab[s]) k = s - 1;
         else p = s + 1;
     }
-    return p;
+    return -1;
+}
+
+int szukaj_bin_rek(int tab[], int szuk, int p, int k) {
+    if (p <= k) {
+        int s = (p+k) / 2;
+        if (tab[s] == szuk) return s;
+        if (szuk < tab[s]) 
+            return szukaj_bin_rek(tab, szuk, p, s-1);
+        else
+            return szukaj_bin_rek(tab, szuk, s+1, k);
+    }
+    return -1;
 }
 
 int main(int argc, char **argv)
@@ -65,6 +76,7 @@ int main(int argc, char **argv)
     cout << "Podaj liczbę: "; cin >> szuk;
     sort_insert(tab, n);
     int indeks = szukaj_bin_lin(tab, n, szuk);
+    //~int indeks = szukaj_bin_rek(tab, szuk, 0, n-1);
     if (indeks>=0) cout << "Znaleziono: " << indeks << endl;
     else cout << "Nie znaleziono!";
     //~int index = szukaj_lin(tab, n, szuk);
