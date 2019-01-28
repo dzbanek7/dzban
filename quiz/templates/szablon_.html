@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
+<!-- szablon.html -->
+
 <head>
     <meta charset="utf-8" />
     <title>{% block tytul %}{% endblock %}</title>
@@ -12,11 +14,11 @@
 <body>
     
     <div id="menu">
-    <ol>
-    <li><a href="{{ url_for('hello') }}">Strona Główna</a></li>
-    <li><a href="{{ url_for('lista') }}">Lista</a></li>
-    <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
-    </ol>
+        <ol>
+            <li><a href="{{ url_for('hello') }}">Strona główna</a></li>
+            <li><a href="{{ url_for('lista') }}">Lista</a></li>
+            <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        </ol>
     </div>
     
     <h1>{% block h1 %}{% endblock %}</h1>
@@ -28,8 +30,8 @@
         {% endfor %}
     {% endif %}
     {% endwith %}
-
+    
     {% block tresc %}{% endblock %}
+    
 </body>
-
 </html>

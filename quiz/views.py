@@ -5,12 +5,13 @@
 from flask import Flask
 from flask import render_template, request, flash, redirect, url_for
 from modele import Kategoria, Pytanie, Odpowiedz
+from forms import *
 
 app = Flask(__name__)
 
 # widok domyślny
 @app.route("/")
-def hello():
+def index():
     return render_template('index.html')
 
 @app.route("/lista")
@@ -34,6 +35,14 @@ def quiz():
     pytania = Pytanie.select().join(Odpowiedz).distinct()
     return render_template('quiz.html', pytania=pytania)
 
+@app.route("/dodaj", methods=['GET', 'POST'])
+def dodaj():
+    """Dodawanie pytań i odpowiedzi"""
+    form = DodajForm()
+
+    return render_template('dodaj.html', form=form)
+    
+    
 def main(args):
     return 0
 
