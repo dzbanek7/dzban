@@ -1,0 +1,13 @@
+n - elementowa tablica
+n-1
+n-2
+n-3
+
+(an) = (1,2, ...,n-2,n-1)
+Sk = (a1 + ak) / 2 * k
+a1 = 1
+ak = n-1
+k = n-1
+
+Sk = (1 + n - 1) / 2 * (n-1)
+Sk =  
