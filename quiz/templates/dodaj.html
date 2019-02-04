@@ -1,14 +1,23 @@
 {% extends "szablon.html" %}
-{% block tytul %}Quiz - odpowiedz na pytania{% endblock %}
-{% block h1 %}Quiz - odpowiedz na pytania{% endblock %}
+{% block tytul %}Quiz – dodaj pytania{% endblock %}
+{% block h1 %}Quiz – dodaj pytania{% endblock %}
 {% block tresc %}
-    
     <form method="POST">
         {{ form.csrf_token }}
         {{ form.pytanie.label }}<br>
         {{ form.pytanie(class="form-control") }}<br>
+        <br>
+        {{ form.kategoria.label }}<br>
+        {{ form.kategoria(class="form-control") }}<br>
+        <br>
+        <label>Podaj odpowiedzi i zaznacz poprawną:</label>
         
-        <input type="submit" class="btn btn-default"value="Prześlij">
+        <ol>
+        {% for odp in form.odpowiedzi %}
+            <li>{{ odp }}</li>
+        {% endfor %}
+        </ol>
+
+        <input type="submit" class="btn btn-default" value="Prześlij">
     </form>
 {% endblock %}
-

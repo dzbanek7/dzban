@@ -1,0 +1,9 @@
+{% extends "szablon.html" %}
+{% block tytul %}QUIZ – Błąd{% endblock %}
+{% block h1 %}Brak takiego zasobu!{% endblock %}
+{% block tresc %}
+    <div class = "alert-warning">
+        Ból dupy, bo coś żeś pomylił w adresie!
+        Wbijaj na <a href="{{url_for('index') }}">Strona główna</a>
+    </div>
+{% endblock %}
