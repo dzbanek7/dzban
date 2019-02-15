@@ -1,48 +1,88 @@
 /*
  * znaki.cpp
+ * 
+ * || - lub
  */
 
 
 #include <iostream>
+
 using namespace std;
 
-void licz_znaki(char tb[], int roz) {
-    //~for(int i = 0; i < roz; i++) {
-        //~cout << tb[i];
-    //~}
+void licz_znaki(char tab[])
+{   
     int i = 0;
-    int biale, inter, reszta;
-    biale = inter = reszta = 0;
-    while (tb[i] != '\0') {
-        //~if (tb[i] == ' ' || tb[i] == '\t') biale++;
-        //~else if (tb[i] == ',' || tb[i] == '.') inter++;
-        //~else reszta++;
-        switch (tb[i]) {
-            case ' ':
-            case '\t':
-                biale++;
-            break;
-            case ',':
-            case '.':
-                inter++;
-            break;
-            default:
-                reszta++;
-
+    int biale, inter, licz;
+    biale = inter = licz = 0;
+    
+    while(tab[i] != '\0')
+    {
+        //if (tab[i] == ' ' || tab[i] == '\t')
+            //biale++;
+        //else
+            //cout << tab[i];
+        switch (tab[i])
+        { 
+            case ' ': biale++; break;
+            case '\t': biale++; break;
+            case ',': inter++; break;
+            case '.': inter++; break;
+            default: licz++; break;
         }
-        i++; //inkrementacja index-u
+        i++;
+                
     }
-    cout << "Białych: " << biale << endl;
-    cout << "Interpu: " << inter << endl;
-    cout << "Reszta: " << reszta << endl;
+    
+    cout << "\nZnaków białych: " << biale << endl;
+    cout << "\nZnaków interpunkcyjnych: " << inter << endl;
+    cout << "\nReszta: " << licz << endl;
+}
+
+void ascii(char tab[])
+{
+    int i = 0;
+    
+    while(tab[i] != '\0')
+    {
+        cout << (int)tab[i] << " ";
+        i++;
+    }
+    
+}
+
+void zamiana_liter(char tab[])
+{   
+    int i = 0;
+    int kod = 0;
+        
+    while(tab[i] != '\0')
+    {
+        kod = (int)tab[i];
+        
+        if (kod >= 65 && kod <= 90)
+            kod += 32;
+        else if (kod >= 97 && kod <= 122)
+            kod -= 32;
+        cout << (char)kod;  
+        i++;
+    }
 }
 
 int main(int argc, char **argv)
-{   
-    const int rozmiar = 20;
-    char znaki[rozmiar];
+{
+	const int rozmiar = 20;  // deklaracja stałej
+    
+    char znaki[rozmiar];  // deklaracja tablicy znakowej (character - znak)
+    
+    cout << "Jak się nazywasz?";
     cin.getline(znaki, rozmiar);
-    licz_znaki(znaki, cin.gcount());
-    return 0;
+    cout << "Cześć " << znaki << endl;
+    
+    //licz_znaki(znaki);
+    
+    //ascii(znaki);
+    
+    zamiana_liter(znaki);
+    
+	return 0;
 }
-
