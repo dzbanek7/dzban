@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-02-18T07:18:36+01:00
+
+====== php ======
+Created poniedziałek 18 lutego 2019
+
+Jak zrobić:
+
+Co jest potrzebne:
+-serwer
+-język php
+https://linetc.readthedocs.io/pl/latest/tools/lamp/index.html#uwamp-w-windows
+
+pliki php umieszczamy w specjalnym katalogu Uwamp... w windows, lub public.html w linuxie
+żeby otworzyć plik w przeglądarce musimy uruchomić serwer php i w wierszu poleceń w przegądarce wpisać: localhost/nazwa_urzytkownika/katalog(opcjonalnie)/plik [tak w linuxie], w windowsie znajdz w linku
+
+zrzut uruchomionego serwera uwamp
+i zrzut info.php 

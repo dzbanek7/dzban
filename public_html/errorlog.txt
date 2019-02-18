@@ -1,0 +1,3 @@
+[18-Feb-2019 08:14:02 Europe/Warsaw] PHP Warning:  Use of undefined constant DINC - assumed 'DINC' (this will throw an Error in a future version of PHP) in /home/kl2ag2/public_html/index.php on line 9
+[18-Feb-2019 08:14:02 Europe/Warsaw] PHP Warning:  include_once(DINCtemplate.php): failed to open stream: Nie ma takiego pliku ani katalogu in /home/kl2ag2/public_html/index.php on line 9
+[18-Feb-2019 08:14:02 Europe/Warsaw] PHP Warning:  include_once(): Failed opening 'DINCtemplate.php' for inclusion (include_path='.:/usr/share/php') in /home/kl2ag2/public_html/index.php on line 9
