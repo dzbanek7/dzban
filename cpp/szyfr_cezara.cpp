@@ -7,14 +7,25 @@ using namespace std;
 
 #define MAKS 100
 
-//~void deszyfruj(char tb[], int klucz) {
-    //~klucz = klucz % 26;
-    //~int i = 0;
-    //~int kod = 0;
-    //~while (tb[i] != '\0') {
-        //~;
-    //~}
-//~}
+void deszyfruj(char tekst[], int klucz, int n){
+    klucz%= 26;
+
+    for(int i=0;i<n;i++){
+        int litera= (int) tekst[i];
+        if(litera!=32){
+        litera-=klucz;
+
+        if(litera<97){
+            litera+=26;
+        }
+        tekst[i]=(char)litera;
+
+    }
+    cout<<tekst[i];
+}
+
+
+}
 
 
 
@@ -45,7 +56,9 @@ int main(int argc, char **argv)
     cout << "Podaj klucz: ";
     cin >> klucz;
     cout << "Szyfr cezara do tekstu: " << endl;
-    szyfruj(tekst, klucz);
+    int n=cin.gcount()-1;
+    //szyfruj(tekst, klucz);
+    deszyfruj(tekst, klucz, n);
 	return 0;
 }
 
