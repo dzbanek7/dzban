@@ -34,12 +34,17 @@ void szyfruj(char tb[], int klucz) {
     int i = 0;
     int kod = 0;
     while (tb[i] != '\0') {
-        kod = (int)tb[i] + klucz;
+        kod = (int)tb[i];
         if (tb[i] == ' ') {
-            kod -= klucz;
-        } else if(kod > 122) {
-            kod -= 26;
+            ;
+        } else if (kod < 91) {
+            kod += klucz;
+            if (kod > 90) kod -= 26;
+        } else {
+            kod += klucz;
+            if (kod > 122) kod -= 26;
         }
+       
         cout << (char)kod;
         tb[i] = (char)kod;
         i++;
@@ -56,9 +61,9 @@ int main(int argc, char **argv)
     cout << "Podaj klucz: ";
     cin >> klucz;
     cout << "Szyfr cezara do tekstu: " << endl;
-    int n=cin.gcount()-1;
-    //szyfruj(tekst, klucz);
-    deszyfruj(tekst, klucz, n);
+    //int n=cin.gcount()-1;
+    szyfruj(tekst, klucz);
+    //~deszyfruj(tekst, klucz, n);
 	return 0;
 }
 
