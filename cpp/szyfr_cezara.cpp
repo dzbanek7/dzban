@@ -61,9 +61,9 @@ int main(int argc, char **argv)
     cout << "Podaj klucz: ";
     cin >> klucz;
     cout << "Szyfr cezara do tekstu: " << endl;
-    //int n=cin.gcount()-1;
-    szyfruj(tekst, klucz);
-    //~deszyfruj(tekst, klucz, n);
+    int n=cin.gcount()-1;
+    //~szyfruj(tekst, klucz);
+    deszyfruj(tekst, klucz, n);
 	return 0;
 }
 
