@@ -2,35 +2,33 @@
 <html lang="pl">
 <!--
    first.php
+   
+   
+   
 -->
 
 <head>
 <meta charset="utf-8" />
 <title>bez nazwy</title>
-<meta name="generator" content="Geany 1.32" />
-</head>
 
+</head>
 <body>
-    
 <?php
 echo "Witaj!";
-// zmienne globalne
-$x = 5 * 5; // zmienną dekalurejmy zawsze przez $. np. $x 
+// zmienne globalne 
+$x = 5 * 5; // zmienna 
 $txt = "działania";
 
-// php tak jak python nie wymaga deklarowania typu danych jak w cpp (int, string)
 function myTest() {
-    global $x;
-    global $txt;
+    global $x, $txt;
     if ($x > 20)
-        echo "<p>Wynik ".$txt.": $x</p>"; // jest różnica pomiedzy '', a "" bo za pomocą '' dostaniemy tylko tekst, za "" kod php     
+        echo "<p>Wynik ".$txt.": $x</p>";  
 }
 
-// zmienną tekstową $txt w tekście deklarujemy przez ".$txt." 
-// w funkcjach trzeba deklarować zmienne globalne ponownie
 myTest();
 
 ?>
+
 
 </body>
 
