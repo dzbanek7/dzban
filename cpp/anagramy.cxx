@@ -9,7 +9,7 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-	char wyraz[] = "ryba";
+	char wyraz[] = "talk";
     int r = 4;
     int i1, i2, i3, i4;
     i1 = i2 = i3 = i4 = 0;
