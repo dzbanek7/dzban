@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-07T07:25:27+01:00
+
+====== Instalacja Linuxa ======
+Created czwartek 07 marca 2019
+
+tablica partycji - forma przechowywania podzielonych części dysku
+
+Jak dzielmy dysk (np. 50G): na system(46G) i swap(4G, w wypadku gdyby zabrakło pamięci RAM)
+
+MBR - część sektorów na dysku twardym w których zapisana jest informacja która partycja jest partycją rozruchową (ta z której uruchamia się system)
+
+=== Szyfrowanie ===
+
+=== Montowanie partycji: ===
+/ - symbolizuje katalog ROOT
+
+montowanie - polega na dołączeniu zasobu do struktury plików
+
+noatime - nie bedzie zapisywana data aktualizacji (wydajność systemu)
+
+Linux - jądro systemu operacyjnego
+Linux - system operacyjny 
+
+Open source - idea systemu otwartego i wolnego (nie ma licencji zamkniętych), Linux nie jest komercyjny 
+
+kernelheader - pliki nagłówkowe (można zaistalować przy instalacji systemu)
+
+serwer wyświetlania  - mechanizm, który wyświetla obraz
+
+środowisko pulpitu(np. gnome, deepin) - od tego zależy motyw szaty graficznej
