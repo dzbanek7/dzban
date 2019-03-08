@@ -23,6 +23,8 @@ noatime - nie bedzie zapisywana data aktualizacji (wydajność systemu)
 Linux - jądro systemu operacyjnego
 Linux - system operacyjny 
 
+=== Pojęcia ===
+
 Open source - idea systemu otwartego i wolnego (nie ma licencji zamkniętych), Linux nie jest komercyjny 
 
 kernelheader - pliki nagłówkowe (można zaistalować przy instalacji systemu)
@@ -30,3 +32,42 @@ kernelheader - pliki nagłówkowe (można zaistalować przy instalacji systemu)
 serwer wyświetlania  - mechanizm, który wyświetla obraz
 
 środowisko pulpitu(np. gnome, deepin) - od tego zależy motyw szaty graficznej
+
+CUPS - serwer stworzony przez apple do obsługi drukarek
+
+bootloader - odpowiada za rozruch systemu
+
+FSTAB - odpowiada za montowanie partycji 
+
+nazwa hosta - nazwa pod jaką komputer bedzie widzoczny dla innych komputerów w sieci
+
+utc - programowanie zegara za pomocą strefy czasowej (kożysta z tego domyślnie Linux)
+localtime - czas z zegara na płycie głównej (Windows domyślnie kożysta z tej metody)
+
+NTP – Protokół komunikacyjny umożliwiający precyzyjną synchronizację czasu pomiędzy komputerami. Wzorcowy czas UTC może pochodzić bezpośrednio z zegarów atomowych lub pośrednio ze specjalizowanych serwerów czasu (ang. Time Server NTP). 
+
+Root - użytkownik, który może wszystko - modyfikowanie systemu (android z tego domyślnie nie kożysta)
+Konto roota jest domyślnie wyłączone, ponieważ można w łatwy sposób zmieniać system na niekożyść
+Pracujemy domyślnie na koncie stwożonym przez system o ograniczonych możliwościach 
+
+Powłoka - (command - domyślna powłoka w Windowsie, uruchamiana poleceniem cmd), (Powershell - powłoka w Windowsie do większej obsługi niz cmd ), (bash - w Linuxie)
+
+reboot - polecenie do restartowania systemu
+
+https://www.virtualbox.org/wiki/Downloads - windowshost - nowa maszyna - 2 gb ramu chyba - stwórz dysk twardy - 15GB dla linuxa- pamiec - wskazac plyte iso pobraną z internetu - uruchamiamy system i testowanie
+
+Linux + TOOLCHAIN + user software (oprogramowanie użytkownika)
+
+toolchain zestaw podstawowego oprogramowania do tworzenia oprogramowania (kompilator, linkery, biblioteki)
+
+1) Slackware - najstarasza dystrybucja linuxa
+2)Debian => Ubuntu => Linux Mint, gałąź stabilna + gałąź rozwojowa 
+apt, dpkg
+Ubuntu LTS - stabilne ubuntu
+Debian stable - stabilny Debian
+
+3) Arch - dustrybucja ciągła, wersja oprogramowania jest odrazu dostępna po publikcji, system jest cały czas aktualny
+
+4) Serwery WWW, bazodanowe: Debian, RedHat, Slackware
+
+5) IOT (internet rzeczy) - koncepcja, wedle której jednoznacznie identyfikowalne przedmioty mogą pośrednio albo bezpośrednio gromadzić, przetwarzać lub wymieniać dane za pośrednictwem instalacji elektrycznej inteligentnej KNX lub sieci komputerowej. Do tego typu przedmiotów zaliczają się między innymi urządzenia gospodarstwa domowego, artykuły oświetleniowe i grzewcze oraz urządzenia noszone (wearables). 
