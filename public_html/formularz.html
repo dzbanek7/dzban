@@ -1,1 +1,35 @@
-<p> Witamy CIe w formularzu pam pam pam rampampam ole ole siabadaba doab da amore</p>
+<?php
+    if (isset($_POST['acc3'])) {
+        
+        //print_r($_POST);
+        
+        foreach ($_POST as $k => $v) {
+            ${$k} = clrtxt($v);
+        }
+        echo'<p>';
+        echo $login."<br>";
+        echo $haslo."<br>";
+        echo $email."<br>";
+        echo'</p>';
+    } else {
+    
+?>
+<form method="POST" action="?id=<?php echo $id; ?>">
+    <input type="hidden" name="acc3" value="mojform" />
+    <div class="form-group">
+        <label for="login">Login:</label> 
+        <input type="text" name="login" id ="login" class="form-control" required maxlength="10" />
+    </div>
+    <div class="form-group">
+        <label for="haslo">Hasło:</label> 
+        <input type="password" name="haslo" id ="haslo" class="form-control" required maxlength="20" />
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail:</label> 
+        <input type="email" name="email" id ="email" class="form-control" required maxlength="30" />
+    </div>
+    <button type="submit" class="btn btn-primary">Wyślij</button>
+</form>
+<?php
+    }
+?>

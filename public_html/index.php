@@ -5,9 +5,17 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'errorlog.txt');
+
 define('DINC', 'inc/');
+define('DBASE', 'db/');
 require_once(DINC.'functions.php');
-print_r($_GET);
+
+require_once(DBASE.'db.php');
+$dbfile=DBASE.'db.sqlite';
+$db=null;
+$mode=PDO::FETCH_ASSOC; // STAŁA Z MODUŁU PDO
+init_baza($dbfile);
+//db_exec($initstr);
 
 $id='witam';
 if (isset($_GET['id'])) $id=trim($_GET['id']);
