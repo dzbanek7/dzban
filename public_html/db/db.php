@@ -38,7 +38,7 @@ function db_query($qstr,&$ret=null) {
 	$kom[]='Wykonuję: '.$qstr.'<br />';
 	$res=null;
 	try {
-		$res=$db->query($qstr);
+        $res=$db->query($qstr);
 	} catch(PDOException $e) {
 		echo ($e->getMessage());
 	}

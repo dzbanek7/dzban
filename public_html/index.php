@@ -16,9 +16,13 @@ $db=null;
 $mode=PDO::FETCH_ASSOC; // STAŁA Z MODUŁU PDO
 init_baza($dbfile);
 //db_exec($initstr);
+require_once(DINC.'user.php');
+$user = new user();
+
+
+
 
 $id='witam';
 if (isset($_GET['id'])) $id=trim($_GET['id']);
-
 include_once(DINC.'template.php');
 ?>
