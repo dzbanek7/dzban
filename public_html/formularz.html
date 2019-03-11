@@ -11,6 +11,13 @@
         echo $haslo."<br>";
         echo $email."<br>";
         echo'</p>';
+        
+        $qstr = 'SELECT uid FROM users WHERE login=\''.@login.'\' LIMIT 1';
+        if (db_query($qstr)) { echo '<p class="text-warning">Podany login istnieje</p>';}
+        
+        $qstr = 'SELECT uid FROM users WHERE email=\''.@email.'\' LIMIT 1';
+        if (db_query($qstr)) { echo '<p class="text-warning">Podany email istnieje</p>';}
+        
     } else {
     
 ?>
