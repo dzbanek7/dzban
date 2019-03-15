@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-13T09:58:04+01:00
+
+====== windows ======
+Created środa 13 marca 2019
+
+Na początku okna nie mogły się nakładać, ponieważ było to zastrzeżone przez macka, od windows 2 mogły.
+
+MS przy widnows 10 przeszedł z ciągłego dodawania wersji systemów do aktualizacji 10.
+
+Telemetria - zbieranie danych o użytkowniku, wada Windowsa. 

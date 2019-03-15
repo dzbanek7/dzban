@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-14T07:50:31+01:00
+
+====== ogólnie ======
+Created czwartek 14 marca 2019
+
+Procesor:
+- dzieli pamięć dysku 
+
+Pojęcia:
+- w każdym systemie jest  jakiś menedżer pamięci
+- planista przydziela czas pracy procesora na program
+- kernel mode - tryb jądra 

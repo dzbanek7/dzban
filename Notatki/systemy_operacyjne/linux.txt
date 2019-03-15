@@ -1,6 +1,9 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
-Creation-Date: 2019-03-07T07:25:27+01:00
+Creation-Date: 2019-03-13T09:57:39+01:00
+
+====== linux ======
+Created środa 13 marca 2019
 
 ====== Instalacja Linuxa ======
 Created czwartek 07 marca 2019

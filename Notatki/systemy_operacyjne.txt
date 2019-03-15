@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-13T09:57:33+01:00
+
+====== systemy operacyjne ======
+Created środa 13 marca 2019
+

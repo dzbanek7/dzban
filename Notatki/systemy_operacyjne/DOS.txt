@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-14T07:30:33+01:00
+
+====== DOS ======
+Created czwartek 14 marca 2019
+
+Pojęcia dotyczące dosa:
+- jednozadaniowy - nie wykonuje wielu zadan jednocześnie - wydajność
+- bez konta użytkownika
+- pracuje w trybie rzeczywistym 
+ 
