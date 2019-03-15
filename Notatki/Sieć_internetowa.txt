@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-15T13:52:00+01:00
+
+====== Sieć internetowa ======
+Created piątek 15 marca 2019
+
+Komputery są połączone w sieć za pomocą kabla ethernet.
+
+Skrętka - kabel, który składa się przeważnie z 8 kabelków, które są skręcone, żeby nie dochodziło do zakłuceń (nakładania się fal itp.)
+
+RJ45 - wtyczka do kabla ethernet
+
+Karta sieciowa 
+
+Przepustowość 100 Mb/s - maksymalna ilość danych możliwych do pobrania na sekundę, zapewnia ją opertaor sieci, jest stała
+
+Prędkość - nie jest stała  
+
+Adres IPv4 - numer idetyfikujący komputer w sieci, v4 - informuje że ma 4 liczby:
+192.168.x.x
+10.x.x.x
+172.16.x.x - taki początek to sieć lokalna
+
+LAN - local area network
+komputer (desktop, laptop(eth, wifi))
+smartfony, drukarki
+
+SWITH (przełącznik)- podpinamy do niego np. kablami komptery, drukarki. Dzięki niemu możemy przekazywać sygnał w sieci lokalnej. [[Interfejsy]] wewnętrzne
+
+ROUTER (SWITH + ROUTER) - interfejs wewnętrzny + interfejs zewnetrzny (DSL, WAN)
+- łączy sieci, routing (trasowanie) - wyznaczanie trasy przez router do właściwej ścieżki w światowym internecie
+
+sprawdz w ustawieniach sieciowych jaki jest adres prywatny a jaki publuiczbych pritsreen
