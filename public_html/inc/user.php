@@ -2,20 +2,20 @@
 ini_set('session.use_cookies', 1);
 ini_set('session.use_only_cookies', 1);
 ini_set('session.save_path', 'sesje');
-ini_set('session.gc_prohability', 1); // usuwanie starych sesji za pomocą garbage collection, od czasu do czasu jest uzywany
+ini_set('session.gc_probability', 1);
 ini_set('session.cookie_httponly', 1);
 
 class user {
-    var $uVal = 'uval';
-    var $remTime = 7200; // czas przechowywania ciasteczek - 2h
-    var $remCookieDomain = '';
-    var $remCookieName = 'sqlDB';
-    var $keys = array('uid', 'login', 'haslo', 'email', 'datad');
-    var $dane = array();
-    var $kom = array();
-    
-    function __construct() {
-        $this->remCookieDomain = ($this->remCookieDomain == '' ? $_SERVER['HTTP_HOST'] : $this->remCookieDomain);
+	var $uVal = 'uval';
+	var $remTime = 7200; // 2 godz.
+	var $remCookieDomain = '';
+	var $remCookieName = 'sqlDB';
+	var $keys = array('uid', 'login', 'haslo', 'email', 'datad');
+	var $dane = array();
+	var $kom = array();
+
+	function __construct() {
+		$this->remCookieDomain = ($this->remCookieDomain == '' ? $_SERVER['HTTP_HOST'] : $this->remCookieDomain);
 		if(!isset($_SESSION)) session_start();
 		if(!empty($_SESSION[$this->uVal])) $this->is_user($_SESSION[$this->uVal]);
 		if (isset($_COOKIE[$this->remCookieName]) && !$this->uid) {
@@ -27,24 +27,23 @@ class user {
 			$h = clrtxt($_POST['haslo']); //hasło użytkownika
 			$this->login($n,$h,true,true);
 		}
-        if (isset($_GET['unlog'])) $this->logout();
-    }
-    
-    function is_user($sid, $login=NULL, $haslo=NULL) {
-        if (!empty($login)) {
-            $qstr='SELECT * FROM users WHERE login=\''.$login.'\' AND
-            haslo = \''.sha1($haslo). '\' LIMIT 1';
-        } else return false;
-        
-        $ret = array();
-        db_query($qstr, $ret);
-        if (!empty($ret[0])) {
-            $this->dane=array_merge($this->dane, $ret[0]);
-            $sid = sha1($this->uid.$this->login.session_id());
-            $_SESSION[$this->uVal] = $sid;
-            return true;
-        }
-    }
+		if (isset($_GET['unlog'])) $this->logout();
+	}
+
+	function is_user($sid, $login=NULL, $haslo=NULL) {
+		if (!empty($login)) {
+			$qstr='SELECT * FROM users WHERE login=\''.$login.'\' AND haslo = \''.sha1($haslo).'\' LIMIT 1';
+		} else return false;
+
+		$ret = array();
+		db_query($qstr, $ret);
+		if (!empty($ret[0])) {
+			$this->dane=array_merge($this->dane, $ret[0]);
+			$sid = sha1($this->uid.$this->login.session_id());
+			$_SESSION[$this->uVal] = $sid;
+			return true;
+		}
+	}
 
 	function login($login, $haslo, $remember=false, $loadUser=true) {
 		$login = rescape($login);
@@ -59,7 +58,7 @@ class user {
 		}
 		$this->kom[]='<b>Błędny login lub hasło!</b>';
 		return false;
-}
+	}
 
 	function logout($redirectTo = '') {
 		//if (isset($_SESSION[$this->uVal])) {
@@ -77,7 +76,7 @@ class user {
 			header('Location: '.$redirectTo);
 			exit;//To ensure security
 		}
-}
+ }
 
 	function savtb() {//tab. asocjacyjna z kluczami: uid#login#haslo#email#datad
 		if (strlen($this->haslo)<40) $this->haslo=sha1($this->haslo);
@@ -86,28 +85,40 @@ class user {
 			$qstr='INSERT INTO users VALUES (NULL,\''.$this->login.'\',\''.$this->haslo.'\',\''.$this->email.'\',time())';
 			$ret=db_exec($qstr);
 			$uid = db_lastInsertID();
-			if ($ret && $uid) {
-				$qstr='INSERT INTO uinfo (uid) VALUES ('.$uid.')';
-				$ret=db_exec($qstr);
-			} else $this->kom[]='Błąd zapisu podstawowych danych użytkownika.';
+			// if ($ret && $uid) {
+			// 	$qstr='INSERT INTO uinfo (uid) VALUES ('.$uid.')';
+			// 	$ret=db_exec($qstr);
+			// } else $this->kom[]='Błąd zapisu podstawowych danych użytkownika.';
 		}
 		if ($ret) return true;
-		return false; 
+		return false;
 	}
 
-    function __set($k, $v) {
-        $this->dane[$k] = $v;
-    }
-    
-    function __get($k) {
-        if (array_key_exists($k, $this->dane))
-            return $this->dane[$k];
-        return null;
-    }
-    
-    function getKom() {
-            foreach ($this-> kom as $kom) echo '<p class="text-info">'.$kom.'</p>';
-    }
+	function __set($k, $v) {
+	  $this->dane[$k] = $v;
+	}
+
+	function __get($k) {
+		if (array_key_exists($k, $this->dane))
+			return $this->dane[$k];
+		return null;
+	}
+
+	function getKom() {
+		foreach ($this->kom as $kom) echo '<p class="text-info">'.$kom.'</p>';
+	}
+
+	function is_login($login) {
+		$qstr = 'SELECT uid FROM users WHERE login=\''.$login.'\' LIMIT 1';
+    if (db_query($qstr)) return true;
+    return false;
+	}
+
+	function is_email($email) {
+		$qstr = 'SELECT uid FROM users WHERE email=\''.$email.'\' LIMIT 1';
+    if (db_query($qstr)) return true;
+    return false;
+	}
 
 }
 ?>

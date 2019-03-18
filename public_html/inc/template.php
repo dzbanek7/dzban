@@ -16,6 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="static/css/scrolling-nav.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
+
   </head>
 
   <body id="page-top">
@@ -23,15 +24,15 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="{{ url_for('hello') }}">Strona główna</a>
+        <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index">Strona główna</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-           <?php
-            get_menu($id);
-           ?>
+            <?php
+                get_menu($id);
+            ?>
           </ul>
         </div>
       </div>
@@ -40,6 +41,7 @@
     <header class="bg-primary text-white">
       <div class="container text-center">
         <h1><?php get_page_title($id); ?></h1>
+        <p class="lead">Dodatkowy tekst</p>
       </div>
     </header>
 
@@ -47,30 +49,28 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-           <?php 
-            get_kom();
-            get_page_content($id); 
-           
-           ?> 
+            
+            <?php
+                get_kom();
+                $user->getKom();
+                get_page_content($id);
+            ?>
+            
           </div>
         </div>
       </div>
     </section>
 
-    
-
-  
-
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Garnuszek 2019</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
       </div>
       <!-- /.container -->
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="static/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
     <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
