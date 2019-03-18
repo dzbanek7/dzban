@@ -16,7 +16,7 @@ $dbfile=DBASE.'db.sqlite';
 $db=null;
 $mode=PDO::FETCH_ASSOC;
 init_baza($dbfile);
-db_exec($initstr);
+//db_exec($initstr);
 require_once(DINC.'user.php');
 $user = new user();
 

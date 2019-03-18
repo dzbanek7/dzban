@@ -1,0 +1,94 @@
+	<?php
+	echo '<link href="css/sqlcmd.css" rel="stylesheet" type="text/css">';
+?>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr class="th"><td>Lp.</td><td>Czynność</td><td>Polecenie</td></tr>
+<tr><td colspan="3" class="katg">Administracja serwerem &#8211; tworzenie baz</td></tr>
+<tr><td class="lp">1.</td><td class="katp">Logowanie do bazy</td><td class="wzor">mysql -h host -u użytkownik -p [hasło]</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="koment">W przypadku oprogramowania Serwer2Go należy wydać polecenie dysk:\Server2Go\server\mysql\bin\mysql --port 7188 -u root</td></tr>
+<tr><td class="lp">2.</td><td class="katp">Zmiana hasła użytkownika</td><td class="wzor">UPDATE user SET Password=PASSWORD('hasło') WHERE user='nazwa_użytkownika';</td></tr>
+<tr><td class="lp">3.</td><td class="katp">Listowanie baz</td><td class="wzor">SHOW DATABASES;</td></tr>
+<tr><td class="lp">4.</td><td class="katp">Wybieranie bazy</td><td class="wzor">USE nazwa_bazy;</td></tr>
+<tr><td class="lp">5.</td><td class="katp">Listowanie tabel</td><td class="wzor">SHOW TABLES;</td></tr>
+<tr><td class="lp">6.</td><td class="katp">Badanie tabel</td><td class="wzor">DESCRIBE nazwa_tabeli;</td></tr>
+<tr><td class="lp">7.</td><td class="katp">Tworzenie bazy</td><td class="wzor">CREATE DATABASE nazwa_bazy;</td></tr>
+<tr><td class="lp">8.</td><td class="katp">Usuwanie bazy</td><td class="wzor">DROP DATABASE nazwa_bazy;</td></tr>
+<tr><td class="lp">9.</td><td class="katp">Korzystanie z pomocy</td><td class="wzor">help [nazwa_polecenia]</td></tr>
+<tr><td class="lp">10.</td><td class="katp">Wylogowanie z bazy</td><td class="wzor">quit</td></tr>
+
+<tr><td colspan="3" class="katg">Zarządzanie użytkownikami bazy</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="koment">% &#8211; oznacza dowolny host; * &#8211; oznacza wszystkie bazy lub tabele</td></tr>
+<tr><td class="lp">1.</td><td class="katp">Dodawanie użytkownika</td><td class="wzor">CREATE USER nazwa_użytkownika@nazwa_hosta IDENTIFIED BY 'haslo'</td></tr>
+<tr><td class="lp">2.</td><td class="katp">Usuwanie użytkownika</td><td class="wzor">DROP USER nazwa_użytkownika@nazwa_hosta;</td></tr>
+<tr><td class="lp">3.</td><td class="katp">Nadawanie uprawnień</td><td class="wzor">GRANT ALL PRIVILEGES ON nazwa_bazy.nazwa_tabeli TO nazwa_użytkownika@nazwa_hosta IDENTIFIED BY 'haslo';</td></tr>
+<tr><td class="lp">4.</td><td class="katp">Odświeżenie uprawnień</td><td class="wzor">FLUSH PRIVILEGES;</td></tr>
+
+<tr><td colspan="3" class="katg">Operacje na tabelach</td></tr>
+<tr><td class="lp">1.</td><td class="katp">Tworzenie tabeli</td><td class="wzor">CREATE TABLE [IF NOT EXIST] nazwa_tabeli (nazwa_pola właściwości_pola) ENGINE = MYISAM;</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="przyklad">np.: CREATE dane (id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, imie VARCHAR(20) NOT NULL, nazwisko VARCHAR(20) NOT NULL, uwagi TEXT NOT NULL) ENGINE = MYISAM;</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td><span class="koment">Uwaga: informacje o typach danych można uzyskać po zalogowaniu się do bazy (patrz wyżej) i nast. poleceń:</span></td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="przyklad">
+			mysql> help Data Types &#8211; wyświetla nazwy typów<br />
+			mysql> help nazwa_typu &#8211; wyświewtla informacje o podanym typie danych, np. help INT</td></tr>
+<tr><td colspan="2" class="katext">Typy pól</td>
+	<td class="extra">
+			SMALINT &#8211; pole liczbowe (-32768 do 32768 lub 0 do 65535)<br />
+			INT &#8211; pole liczbowe (-2147483648 do 2147483647 lub 0 do 4294967295)<br />
+			FLOAT &#8211; pole liczbowe (-3.402823466E+38 do -1.754494351E-38 lub 0 i -1.754494351E-38 do 3.402823466E+38)<br />
+			DATE &#8211; data w formacie RRRR-MM-DD<br />
+			DATETIME &#8211; data i czas w formacie RRRR-MM-DD GG:MM:SS<br />
+			TIMESTAMP &#8211; data i czas liczone w sekundach od początku epoki UNIX-a, czyli od 1970-01-01 00:00:00<br />
+			CHAR &#8211; pole znakowe o stałej długości (1 do 255 bajtów)<br/>
+			VARCHAR &#8211; pole znakowe o zmiennej długości (1 do 255 bajtów)<br />
+			TINYTEXT &#8211; tekst nieprzekraczający 255 bajtów<br />
+			TEXT &#8211; tekst nieprzekraczający 65 535 bajtów<br />
+			ENUM &#8211; pole zawierające jedną z wartości wymienionych na liście wyliczeniowej definicji pola<br />
+			SET &#8211; pole zawierające dowolną liczbę z wartości wymienionych na liście wyliczeniowej definicji pola</td></tr>
+<tr><td colspan="2" class="katext">Modyfikatory typów pól</td>
+	<td class="extra">[NOT] NULL &#8211; pole (nie) może zawierać wartości null (nic)<br />
+			AUTO_INCREMENT &#8211; wartość pola będzie nadawana automatycznie<br />
+			PRIMARY_KEY &#8211; pole zdefiniowane jako klucz główny, dla pola tworzony jest indeks<br />
+			UNSIGNED &#8211; oznacza "bez znaku" i zmienia zakres zmiennych typu liczbowego na dodatni<br />
+			BINARY &#8211; pole zawiera wartości binarne (np. obrazki, dźwięki)<br />
+			DEFAULT wartość &#8211; określa wartość domyślną pola<br />
+			ENGINE = MYISAM &#8211; określa typ silnika bazy danych<br />
+			</td></tr>
+<tr><td class="lp">2.</td><td class="katp">Zmiana nazwy tabeli</td><td class="wzor">ALTER TABLE stara_nazwa RENAME nowa_nazwa;</td></tr>
+<tr><td class="lp">3.</td><td class="katp">Usuwanie tabeli</td><td class="wzor">DROP TABLE nazwa_tabeli;</td></tr>
+<tr><td class="lp">4.</td><td class="katp">Definiowanie klucza głównego</td><td class="wzor">ALTER TABLE nazwa_tabeli ADD PRIMARY KEY (lista_pól);</td></tr>
+<tr><td class="lp">5.</td><td class="katp">Usuwanie klucza głównego</td><td class="wzor">ALTER TABLE nazwa_tabeli DROP PRIMARY KEY;</td></tr>
+<tr><td class="lp">6.</td><td class="katp">Tworzenie indeksu</td><td class="wzor">CREATE INDEX nazwa_indeksu ON nazwa_tabeli (lista_pól);<br />ALTER TABLE nazwa_tabeli ADD INDEX nazwa_indeksu (lista_pól);</td></tr>
+<tr><td class="lp">7.</td><td class="katp">Usuwanie indeksu</td><td class="wzor">DROP INDEX nazwa_indeksu ON nazwa_tabeli;<br />ALTER TABLE nazwa_tabeli DROP INDEX nazwa_indeksu;</td></tr>
+
+<tr><td colspan="3" class="katg">Operacje na polach tabel</td></tr>
+<tr><td class="lp">1.</td><td class="katp">Dodawanie pól</td><td class="wzor">ALTER TABLE nazwa_tabeli ADD nazwa_pola właściwości_pola;</td></tr>
+<tr><td class="lp">2.</td><td class="katp">Zmiana typu pola</td><td class="wzor">ALTER TABLE nazwa_tabeli CHANGE stara_nazwa_pola nowa_nazwa_pola właściwości_pola;</td></tr>
+<tr><td class="lp">3.</td><td class="katp">Usuwanie pola</td><td class="wzor">ALTER TABLE nazwa_tabeli DROP nazwa_pola;</td></tr>
+
+<tr><td colspan="3" class="katg">Operacje na danych</td></tr>
+<tr><td class="lp">1.</td><td class="katp">Dodawanie danych do tabeli</td><td class="wzor">INSERT INTO nazwa_tabeli (nazwa_pola1,[nazwa_pola2]...) VALUES ('wartość1',['wartość2']...);</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="przyklad">np.: INSERT INTO dane (id,imie,nazwisko,uwagi,data) VALUES (NULL,'Jan','Kowalski','Fajny gość!','1982-10-26');</td></tr>
+<tr><td class="lp">2.</td><td class="katp">Kwerendy</td><td class="wzor">SELECT [*]|[nazwa_pola1,nazwa_pola2...] FROM nazwa_tabeli</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="przyklad">np.: SELECT * FROM dane; lub SELECT imie from DANE;<br />* oznacza wszystkie pola</td></tr>
+<tr><td colspan="2" rowspan="6" class="katext">Modyfikatory kwerend</td>
+	<td class="extra">LIMIT nr_rekordu, ilość_rekordów &#8211; kwerenda zwróci ilość_rekordów poczynając od nr_rekordu</td></tr>
+		<tr><td class="przyklad">np.: SELECT imie,nazwisko FROM dane LIMIT 2,5;</td></tr>
+	<tr><td class="extra">ORDER BY 'nazwa_pola' ASC|DESC &#8211; zwróceone rekordy zostaną posrtowane wg 'nazwy_pola' roscnąco(ASC) lub malejąco(DESC)</td></tr>
+		<tr><td class="przyklad">np.: SELECT * FROM dane ORDER BY 'nazwisko' ASC;</td></tr>
+	<tr><td class="extra">WHERE warunek &#8211; zwraca rekordy spełniające warunek</td></tr>
+		<tr><td class="przyklad">np.:	SELECT imie FROM dane WHERE imie='Ala';<br />SELECT nazwisko FROM dane WHERE data_ur>1990-01-10;</td></tr>
+<tr><td colspan="2" rowspan="4" class="katext">Operatory warunków</td>
+	<td class="extra">Określając warunek w klauzuli WHERE można używać operatorów: = (jest równe), > (jest większe), >= (większe lub równe), < (mniejsze), <= (mniejsze lub równe), != (nie jest równe), [NOT] LIKE (nie jest/jest podobne), IS [NOT] NULL (jest/nie jest puste), [NOT] REGEXP (nie jest/jest równe wyrażeniu)</td></tr>
+		<tr><td class="przyklad">np.: SELECT * FROM dane WHERE 'imie' LIKE '%a%'; (znak % zastępuje dowolną część ciągu)</td></tr>
+	<tr><td class="extra">Dostępne są również operatory logiczne AND (koniunkcja) i OR (alternatywa) &#8211; wykorzystywane do grupowania warunków &#8211; pamiętać należy o właściwym używaniu nawiasów precyzujących wynik wyrażenia.</td></tr>
+		<tr><td class="przyklad">np.: SELECT * FROM dane WHERE (imie LIKE '%a%' AND nazwisko='Kowalski')</td></tr>
+<tr><td class="lp">3.</td><td class="katp">Aktualizacja danych</td><td class="wzor">UPDATE nazwa_tabeli SET nazwa_pola VALUES ('wartość') WHERE warunek;</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="przyklad">np.: UPDATE dane SET imie VALUES ('Adam') WHERE nazwisko='Kowalski';</td></tr>
+<tr><td class="lp">4.</td><td class="katp">Usuwanie danych</td><td class="wzor">DELETE FROM nazwa_tabeli WHERE warunek;</td></tr>
+<tr><td colspan="2" class="back">&nbsp;</td><td class="przyklad">np.: DELETE FROM dane WHERE nazwisko='Kowalski';</td></tr>
+</table>
+<p><strong>LINKI</strong><br />
+<a href="http://robski.klub.chip.pl/?do=1009">Zrozumieć MySQL</a><br />
+<a href="http://galaxy.uci.agh.edu.pl/~chwastek/lectures/db/dbspis.html">Bazy danych</a><br />
+<a href="s2go.html">Konfiguracja oprogramowanie Server2Go</a>
+</p>
