@@ -31,4 +31,12 @@ SWITH (przełącznik)- podpinamy do niego np. kablami komptery, drukarki. Dzięk
 ROUTER (SWITH + ROUTER) - interfejs wewnętrzny + interfejs zewnetrzny (DSL, WAN)
 - łączy sieci, routing (trasowanie) - wyznaczanie trasy przez router do właściwej ścieżki w światowym internecie
 
-sprawdz w ustawieniach sieciowych jaki jest adres prywatny a jaki publuiczbych pritsreen
+protokół - język porozumiewania się pomiedzy komputerami i aplikacjami.
+protokół HTTP - protokół przesyłania dokumentów hipertekstowych port 80/TCP
+protokół HTTPS port 443/TCP over TLS/SSL
+protokół SSH - umożliwiający komunikacje klient-serwer, port 22/TCP
+
+PORT - od 1 do 65551, porty od 1-1024 są najważniejsze
+
+
+warstwa TLS - rozwiniecie protokołu SSL, 
