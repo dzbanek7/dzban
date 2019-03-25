@@ -40,3 +40,30 @@ PORT - od 1 do 65551, porty od 1-1024 są najważniejsze
 
 
 warstwa TLS - rozwiniecie protokołu SSL, 
+
+==== Warstwa transportowa: ====
+
+1. TCP - protokół sterowania transmisją: stanowy, połączeniowy, niezawodny.
+	HTTP(S), FTP(S), SMTP, POP3, IMAP, SSH - musi kożystać z TCP.
+
+2. UDP - zawodny: gry, komunikatory, streaming, broadcasting
+
+==== Wartwa internetowa: ====
+192.168.x.x, 172.16.x.x, 10.x.x.x - adresy prywatne
+
+192.168.3.10/24
+192.168.3.0 - adres sieci
+192.168.3.255 - adres broadcast
+
+192.168.3.15 => MAC (ARP)
+
+Gniazdo - socket (telekomunkacja), składa się z:
+1.protokół wyminay danych
+2.lokalny adres (np. adres IP, IPX, Ethernet)
+3.opcjonalny lokalny numer portu identyfikujący proces
+
+==== Warstwa dostępu do sieci: ====
+
+
+
+
