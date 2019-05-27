@@ -1,0 +1,25 @@
+<?php
+//print_r($GLOBALS['user']);
+    $akcja = '';
+    if (isset($_POST['akcja'])) {
+        $akcja = $_POST['akcja'];
+    }
+    if ($akcja == 'create') {
+    
+        $qstr = trim($_POST['sqlstr']);
+        echo '<p>Polecenie:<br><code>'.$qstr.'</code></p>';
+        db_exec($qstr);
+        
+    } else {
+?>
+<form method="POST" action="?id=<?php echo $id; ?>">
+    <input type="hidden" name="akcja" value="create" />
+    <div class="form-group">
+        <label for="login">Polecenie SQL:</label>
+        <textarea name="sqlstr" rows="5" cols="60" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Wyślij</button>
+</form>
+<?php
+    }
+?>

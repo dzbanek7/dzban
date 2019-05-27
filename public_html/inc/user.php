@@ -53,7 +53,8 @@ class user {
 			  $cookie = base64_encode(serialize(array('login'=>$login,'haslo'=>$haslo,'czas'=>time())));
 			  $a = setcookie($this->remCookieName,$cookie,time()+$this->remTime,'/',$this->remCookieDomain,false,true);
 			}
-			$this->kom[]='Witaj '.$login.'! Zostałeś zalogowany.';
+            if ($remember)
+                $this->kom[]='Witaj '.$login.'! Zostałeś zalogowany.';
 			return true;
 		}
 		$this->kom[]='<b>Błędny login lub hasło!</b>';

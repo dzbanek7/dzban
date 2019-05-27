@@ -2,8 +2,8 @@
 $kom = [];  // tablica komunikatów
 $pages = array(
     'witam'=>'Aplikacja w PHP',
-    'sqlcmd'=>'SQL',
-    'csssel'=>'Selektory CSS',
+    'create'=>'SQL Create',
+    'select'=>'SQL SELECT',
     'formularz'=>'Formularz'
 );
 

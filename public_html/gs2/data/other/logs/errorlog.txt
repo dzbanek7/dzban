@@ -1,0 +1,38 @@
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:02 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[29-Apr-2019 07:51:43 Europe/Berlin] PHP Warning:  chmod(): Operation not permitted in /home/kl2ag2/public_html/gs2/admin/install.php on line 44
+[20-May-2019 07:35:17 Europe/Sarajevo] PHP Fatal error:  Uncaught Error: Call to undefined function get_site_title() in /home/kl2ag2/public_html/gs2/theme/Bootstrap/template.php:18
+Stack trace:
+#0 /home/kl2ag2/public_html/gs2/index.php(134): include()
+#1 {main}
+  thrown in /home/kl2ag2/public_html/gs2/theme/Bootstrap/template.php on line 18
+[20-May-2019 07:42:56 Europe/Sarajevo] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; I18nNavigationItem has a deprecated constructor in /home/kl2ag2/public_html/gs2/plugins/i18n_navigation/frontend.class.php on line 349
+[20-May-2019 07:45:05 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/admin/changedata.php on line 52
+[20-May-2019 07:46:46 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/admin/changedata.php on line 52
+[20-May-2019 07:47:13 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/admin/changedata.php on line 52
+[20-May-2019 07:49:54 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/plugins/i18n_navigation/frontend.class.php on line 219
+[20-May-2019 07:53:03 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/plugins/i18n_navigation/frontend.class.php on line 219
+[20-May-2019 07:53:07 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/plugins/i18n_navigation/frontend.class.php on line 219
+[20-May-2019 07:53:27 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/plugins/i18n_navigation/frontend.class.php on line 219
+[20-May-2019 08:04:22 Europe/Sarajevo] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; I18nNavigationItem has a deprecated constructor in /home/kl2ag2/public_html/gs2/plugins/i18n_navigation/frontend.class.php on line 350
+[20-May-2019 08:39:42 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/admin/upload.php on line 183
+[20-May-2019 08:39:42 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/admin/upload.php on line 235
+[20-May-2019 08:39:42 Europe/Sarajevo] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/kl2ag2/public_html/gs2/admin/upload.php on line 271
+[20-May-2019 08:39:42 Europe/Sarajevo] PHP Notice:  A non well formed numeric value encountered in /home/kl2ag2/public_html/gs2/admin/inc/basic.php on line 1198
+[20-May-2019 08:39:42 Europe/Sarajevo] PHP Notice:  A non well formed numeric value encountered in /home/kl2ag2/public_html/gs2/admin/inc/basic.php on line 1198
