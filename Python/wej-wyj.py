@@ -3,16 +3,15 @@
 #
 #  szablon.py
 
-
 def main(args):
-    #a = 0 # inicjacja zmiennnej
-    a = input('Podaj liczbę: ')
-    b = input('Podaj liczbę: ')
-    c = input('Podaj liczbę: ')
-
+    a = str(input('Jak masz na imię?: '))
+    b = str(input('Jak masz na nazwisko?: '))
     
+    print("Witaj", a,b)
     
     return 0
+    
+# duck typing
 
 if __name__ == '__main__':
     import sys

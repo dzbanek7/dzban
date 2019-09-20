@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-17T07:23:47+02:00
+
+====== specyfika baz danych ======
+Created wtorek 17 września 2019
+
+===== Anomalie baz danych: =====
+- redudacja - nadmiarowość danych
+-anomalia modyfikacji
+-anomlia usuwania
+-anomalia dodawania
+
+===== Normalizacja baz danych - usuwanie redudacji: =====
+- atomowość informacji - rozdzielanie informacji z tych samych komórek 
+- podział danych na tabele
+
+=== Arkusz kalkulacyjny - przydatne polecenia ===
+-Dane/Tekst jako kolumny 
+
+== Funkcje tesktowe w arkuszu ==
+-DŁ - długość tekstu
+-FRAGMENT.TEKSTU - Zwraca fragmnet podanego 
+-LEWY; PRAWY - zwraca określoną liczbe znaków z danej strony  
+-SZUKAJ.TEKST
+
+-
+
+== Filtry ==
+Dane/Więcej filtrów/Filtr standardowy - opcja"Bez duplikatów"
+
+== Sortownie ==
+Dane/sortuj
+
+jak chce wkleić kolumne jako tekst a nie jako formuła to wklej specjalne
+
+===== Skróty =====
+CTRL+SHIFT=strzałka w dół - zaznaczenie serii danych w kolumnie
