@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-04T07:30:14+02:00
+
+====== kwerendy ======
+Created piątek 04 października 2019
+
+LIKE'*a' kryterium zwracjaące dane kończonce się na a 
+LIKE'g?ma' kryterium zwracjaące dane takie jak guma i gama

@@ -1,0 +1,9 @@
+Zadanie
+
+Na podstawie plików żródłowych "uczniowie.txt" i "oceny.txt" przygotuj bazę danych "uczniowie98.odb" w programie LibreOffice Base.
+
+a) Dokonaj normalizacji danych.
+b) Tworząc tabele dobierz właściwe typy danych i nałóż odpowiednie ograniczenia.
+c) Pamiętaj o utworzeniu relacji i ustaleniu działania podejmowanego po ewentualnej aktualizacji lub usunięciu kluczy głównych.
+d) Zaprojektuj formularz albo formularze do przeglądania i edycji danych uczniów oraz ich ocen.
+e) Zmień nazwę pliku bazy na "nazwisko_imie_uczniowie98.odb" i wgraj do katalogu "upload/grupa" na serwerze ftp://192.168.3.3

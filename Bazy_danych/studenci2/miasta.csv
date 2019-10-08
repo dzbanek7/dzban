@@ -1,0 +1,220 @@
+id,miasto,kod
+1,Aleksandrów Kujawski,53-614
+2,Alwernia,27-938
+3,Baborów,48-364
+4,Barlinek,83-236
+5,Barwinek,09-428
+6,Bezledy,75-057
+7,Będzin,69-501
+8,Biała Podlaska,00-425
+9,Białaszewo,56-545
+10,Białystok,54-632
+11,Bielsk Podlaski,96-087
+12,Bochnia,89-362
+13,Bożewo,94-896
+14,Brańsk,29-325
+15,Brzeg Dolny,14-287
+16,Brzesko,96-703
+17,Bydgoszcz,29-199
+18,Bytom,80-339
+19,Chalupki,70-071
+20,Chełm,37-997
+21,Chorzów,97-545
+22,Chyżne,76-235
+23,Ciechanów,37-640
+24,Ciechocinek,98-839
+25,Cieszyn,68-101
+26,Częstochowa,86-116
+27,Daszyna,43-141
+28,Dąbrowa Górnicza,75-727
+29,Debrzno,03-065
+30,Dębica,53-306
+31,Dęblin,53-807
+32,Dębowiec,36-478
+33,Długopole-Zdrój,07-772
+34,Dobieszowice,34-734
+35,Dobre Miasto,52-964
+36,Dzierżoniów,87-324
+37,Elbląg,10-656
+38,Ełk,05-563
+39,Gdańsk,83-271
+40,Gdynia,13-179
+41,Giebło,76-179
+42,Gierałtowice,04-834
+43,Gliwice,11-608
+44,Głubczyce,65-458
+45,Głuchołazy,30-136
+46,Gorki Male,36-984
+47,Gorzów Wielkopolski,78-003
+48,Gostyń,97-023
+49,Grudziądz,43-210
+50,Gryfice,51-783
+51,Gubin,94-706
+52,Halinów,33-056
+53,Hrebenne,37-873
+54,Iława,70-459
+55,Inowrocław,21-327
+56,Istebna,22-654
+57,Izbica Kujawska,02-756
+58,Jakuszyce,89-300
+59,Jasło,92-050
+60,Jastrzębie-Zdrój,51-394
+61,Jaworzno,98-650
+62,Jaworzynka,56-921
+63,Jejkowice,67-738
+64,Jelenia Góra,14-742
+65,Jeżewo,53-780
+66,Jędrzejów,62-049
+67,Józefów,40-643
+68,Julianka,95-306
+69,Kalisz,29-379
+70,Karniewo,21-405
+71,Katowice,72-241
+72,Kety,36-844
+73,Kędzierzyn-Koźle,81-133
+74,Kępice,66-251
+75,Kielce,04-274
+76,Kleszczów,18-459
+77,Kłomnice,43-045
+78,Kobylin,02-635
+79,Kobylin-Borzymy,21-258
+80,Kogutek,99-754
+81,Kołbaskowo,95-186
+82,Koniaków,34-607
+83,Konin,39-551
+84,Kostrzyn,22-864
+85,Koszalin,36-759
+86,Kościan,26-594
+87,Krapkowice,94-560
+88,Kraśnik,90-749
+89,Krosno,80-338
+90,Kruszwica,33-294
+91,Krzeszowice,91-488
+92,Krzyż Wielkopolski,09-310
+93,Kudowa-Słone,83-829
+94,Kuźnia Raciborska,78-122
+95,Kuźnica Białostocka,81-042
+96,Legionowo,36-889
+97,Legnica,58-930
+98,Leszno,90-272
+99,Lędziny,27-535
+100,Limanowa,65-385
+101,Lódź,92-577
+102,Lubaczów,60-915
+103,Lublin,79-726
+104,Lubliniec,14-322
+105,Lwówek Sląski,11-782
+106,Łazy,63-587
+107,Łęczyca,16-385
+108,Łomża,22-623
+109,Malbork,70-239
+110,Medyka,67-566
+111,Miechów,47-553
+112,Międzyrzecz,64-542
+113,Międzyrzecze,28-079
+114,Mikołajki,83-977
+115,Mikołów,96-497
+116,Mirów,69-389
+117,Młynarze,72-438
+118,Monki,32-544
+119,Mordy,07-754
+120,Mysłowice,13-220
+121,Myszków,91-786
+122,Nałęczów,83-630
+123,Nowy Sącz,62-813
+124,Nowy Targ,84-043
+125,Nysa,72-297
+126,Oborniki,33-160
+127,Ogrodniki,14-095
+128,Ogrodzieniec,82-082
+129,Olkusz,19-255
+130,Olsztyn,44-718
+131,Olszyna,69-786
+132,Opole,16-549
+133,Ostrołęka,60-815
+134,Oświęcim,27-702
+135,Otmuchów,69-204
+136,Piechowice,57-943
+137,Pila,06-355
+138,Pilica,15-308
+139,Piotrków Trybunalski,04-419
+140,Piwniczna-Zdrój,09-592
+141,Płock,04-688
+142,Poraj,80-436
+143,Poznań,40-853
+144,Prudnik,09-823
+145,Przasnysz,81-084
+146,Przemyśl,38-959
+147,Pszczyna,53-858
+148,Puławy,66-219
+149,Pyrzowice,49-345
+150,Pyrzyce,76-362
+151,Rabka,30-698
+152,Racibórz,00-355
+153,Radom,43-586
+154,Rajcza,18-286
+155,Rogoźnik,74-768
+156,Ruda Sląska,12-684
+157,Rybnik,24-983
+158,Rzeszów,89-735
+159,Sanok,71-890
+160,Siedlce,14-461
+161,Siemianowice Sląskie,09-006
+162,Sieradz,62-407
+163,Siewierz,65-885
+164,Skierniewice,18-665
+165,Skorogoszcz,57-633
+166,Sławków,42-081
+167,Sobotka,16-386
+168,Sopot,77-187
+169,Sosnowiec,14-721
+170,Sośnicowice,15-658
+171,Strzelce Opolskie,60-596
+172,Sucha Beskidzka,98-902
+173,Suraż,76-117
+174,Suwałki,91-271
+175,Szamotuły,64-698
+176,Szczecin,22-544
+177,Szczecinek,48-418
+178,Szczekociny,66-008
+179,Szczyrk,75-361
+180,Świecko,47-842
+181,Świeradów-Zdrój,01-685
+182,Świętochłowice,38-932
+183,Świnoujskie,13-345
+184,Tarnobrzeg,85-266
+185,Tarnowskie Góry,24-243
+186,Tarnów,87-348
+187,Terespol,22-593
+188,Tomaszów Lubelski,95-084
+189,Toruń,90-535
+190,Trzebinia,26-607
+191,Tworóg,62-560
+192,Tychy,76-939
+193,Ustroń,51-637
+194,Wadowice,47-222
+195,Walce,28-103
+196,Wałbrzych,62-834
+197,Warszawa,83-294
+198,Wągrowiec,87-659
+199,Wejherowo,68-209
+200,Węgorzewo,67-547
+201,Wisła,99-436
+202,Witonia,21-857
+203,Włocławek,10-408
+204,Włodowice,37-089
+205,Wodzisław Sląski,83-544
+206,Wojkowice,84-273
+207,Wolbrom,46-174
+208,Wrocław,62-182
+209,Zabrodzie,71-608
+210,Zabrze,91-525
+211,Zakopane,00-995
+212,Zambrów,53-324
+213,Zamość,99-773
+214,Zawiercie,58-922
+215,Zgorzelec,79-972
+216,Zielona Góra,95-970
+217,Żory,29-724
+218,Żyrardów,51-006
+219,Żywiec,00-137
