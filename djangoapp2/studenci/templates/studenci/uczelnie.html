@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Uczelnie</title>
+</head>
+<body>
+
+<h1>Uczelnie</h1>
+
+<h2>Dodaj uczelnie</h2>
+<form action="." method="POST">
+    {% csrf_token %}
+    <input type="text" name="nazwa" maxlength="30">
+    <br>
+    <input type="submit" value="Zapisz">
+</form>
+
+<h2>Lista uczelni</h2>
+<ol>
+    {% for uczelnia in uczelnia %}
+        <li>{{ uczelnia.nazwa }}</li>
+    {% endfor %}
+</ol>
+
+</body>
+</html>
